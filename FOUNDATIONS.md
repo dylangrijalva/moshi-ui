@@ -41,35 +41,21 @@ Avoid gratuitous gradients, excessive shadows, glassmorphism, oversized cards, i
 
 ## 3. Color foundations
 
-Use **semantic color roles** rather than hardcoded colors in product UI code. The hex values below are the v0.1 source decisions; implementation in tokens/ will follow.
+Moshi's approved **primitive palette** is defined in [`tokens/colors/primitives.tokens.json`](tokens/colors/primitives.tokens.json) and documented in [`COLORS.md`](COLORS.md). This Figma-derived palette replaces the previous indigo/slate placeholder values.
 
-Light is the default theme for the first implementation. Dark tokens are defined now to keep the system coherent; a product does not need to ship dark mode until it is implemented and tested.
+The palette includes **orange** (brand family), **blue** (web action reference), **yellow**, **neutral grayscale**, and separate **success, warning, error, and information** ramps.
 
-| Semantic role | Light | Dark | Usage |
-| --- | --- | --- | --- |
-| color.bg.canvas | #F8FAFC | #0B0D12 | Main application background |
-| color.bg.surface | #FFFFFF | #121720 | Cards, menus, dialogs, panels |
-| color.bg.muted | #F1F5F9 | #1E293B | Subtle regions and selected backgrounds |
-| color.text.primary | #0F172A | #F8FAFC | Main text and headings |
-| color.text.secondary | #475569 | #CBD5E1 | Supporting text and metadata |
-| color.border.subtle | #CBD5E1 | #334155 | Dividers and low-emphasis boundaries |
-| color.border.interactive | #64748B | #94A3B8 | Borders needed to identify controls |
-| color.action.primary | #4F46E5 | #4F46E5 | Primary action background |
-| color.action.onPrimary | #FFFFFF | #FFFFFF | Text/icons on primary actions |
-| color.focus.ring | #4F46E5 | #A5B4FC | Visible keyboard focus |
-| color.status.success | #166534 | #86EFAC | Success text and icons |
-| color.status.warning | #92400E | #FCD34D | Warning text and icons |
-| color.status.error | #B91C1C | #FCA5A5 | Error text and icons |
+Primitive swatches do **not** define their own component usage. Semantic mappings for web/light/dark/mobile are the next milestone and must be validated for accessible contrast before becoming mandatory.
 
 ### Color rules
 
-- Prefer the neutral palette for most of the interface. Reserve the accent for meaningful actions, selection, and focus.
-- Use **color.action.onPrimary** only on **color.action.primary** or on a separately contrast-validated equivalent; it is not a general-purpose inverse text token.
-- The status colors above are intended for text and icons on the documented neutral surfaces, not automatically for filled buttons or badges.
-- Subtle borders are decorative separators. Where a control's boundary must be perceivable, use **color.border.interactive** or another contrast-validated treatment.
-- Do not communicate success, warning, error, or selection through color alone.
-- Check foreground/background contrast for every new combination, including hover, disabled, and selected states. A listed token does not automatically make every pairing accessible.
-- Products may introduce additional brand colors only as explicitly documented theme overrides, not as arbitrary local hex values.
+- Treat `tokens/colors/primitives.tokens.json` as the single source of truth for raw hex colors; do not duplicate primitive values in other files.
+- Prefer semantic color roles in product code, not primitive hex values. Where Moshi semantic roles are not defined yet, preserve the application's existing accessible theme or request a proposed mapping for review.
+- Reserve brand colors for identity and deliberate emphasis; do not assume the brand color equals the interactive action color.
+- Use purpose-specific text, background, border, interactive, and status roles once the semantic token layer is approved.
+- Never communicate status or selection through color alone.
+- Validate combinations, focus states, and interactive boundaries against WCAG 2.2 criteria, including light/dark variants when supported.
+- Do not invent missing Figma colors or unapproved platform themes.
 
 ## 4. Typography
 
@@ -216,7 +202,7 @@ Moshi's v0.1 brand direction is **restrained, professional, and precise**. Logo,
 When implementing UI with Moshi:
 
 1. Read this document before building a screen.
-2. Use the semantic roles, typography scale, spacing scale, and radius scale defined here.
+2. Use the documented typography, spacing, and radius scales. For colors, read COLORS.md and use approved semantic roles when available; do not improvise mappings from raw swatches.
 3. Prefer existing project components and documented patterns; do not introduce a parallel component library without justification.
 4. Do not use arbitrary hex colors, magic spacing numbers, or inconsistent corner radii.
 5. Follow accessibility and platform conventions even when an inspiration screenshot does not.
@@ -227,7 +213,7 @@ When implementing UI with Moshi:
 ### UI review checklist
 
 - [ ] Clear primary task and visual hierarchy
-- [ ] Uses Moshi semantic colors and spacing
+- [ ] Uses approved Moshi color mappings (where defined) and spacing
 - [ ] Typography and radii follow the defined scales
 - [ ] Approved components reused where available
 - [ ] Responsive layout and touch targets reviewed
@@ -240,7 +226,7 @@ When implementing UI with Moshi:
 This is **Moshi v0.1**, intentionally small. It defines shared visual foundations, not a finished design library.
 
 **Next artifacts:**
-1. **tokens/** — machine-readable tokens and theme mappings derived from these values.
+1. **tokens/colors/primitives.tokens.json** — defined. Next: semantic color/theme mappings validated against real interfaces.
 2. **COMPONENTS.md** — approved component anatomy, variants, interaction states, and usage.
 3. **AGENTS.md** — a short operational entry point telling agents where to read Moshi rules.
 4. **examples/** — one real screen used to validate and refine the system.
