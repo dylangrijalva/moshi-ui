@@ -1,0 +1,164 @@
+{
+  "$description": "Moshi UI v0.1 primitive color palette. Colors extracted from the Foundations Figma reference; neutral step labels are normalized for Moshi. These are primitives, not approved UI semantic roles.",
+  "color": {
+    "orange": {
+      "0": {
+        "$value": "#FCE8E5"
+      },
+      "25": {
+        "$value": "#FFA788"
+      },
+      "50": {
+        "$value": "#FF4C00"
+      },
+      "75": {
+        "$value": "#DB3B11"
+      },
+      "100": {
+        "$value": "#C12700"
+      },
+      "$type": "color"
+    },
+    "blue": {
+      "0": {
+        "$value": "#E7EAF6"
+      },
+      "25": {
+        "$value": "#9AA6DB"
+      },
+      "50": {
+        "$value": "#5069C3"
+      },
+      "75": {
+        "$value": "#2B4FB9"
+      },
+      "100": {
+        "$value": "#002182"
+      },
+      "$type": "color"
+    },
+    "yellow": {
+      "0": {
+        "$value": "#FEEDB4"
+      },
+      "25": {
+        "$value": "#FED850"
+      },
+      "50": {
+        "$value": "#FFB700"
+      },
+      "75": {
+        "$value": "#FF9300"
+      },
+      "100": {
+        "$value": "#F76600"
+      },
+      "$type": "color"
+    },
+    "neutral": {
+      "0": {
+        "$value": "#FFFFFF"
+      },
+      "50": {
+        "$value": "#F7F7F7"
+      },
+      "100": {
+        "$value": "#F0F0F0"
+      },
+      "200": {
+        "$value": "#E5E5E5"
+      },
+      "400": {
+        "$value": "#C0C0C0"
+      },
+      "500": {
+        "$value": "#7A7A7A"
+      },
+      "600": {
+        "$value": "#666666"
+      },
+      "700": {
+        "$value": "#474747"
+      },
+      "900": {
+        "$value": "#252525"
+      },
+      "1000": {
+        "$value": "#000000"
+      },
+      "$type": "color"
+    },
+    "success": {
+      "0": {
+        "$value": "#E8F7D4"
+      },
+      "25": {
+        "$value": "#AFE26C"
+      },
+      "50": {
+        "$value": "#71B314"
+      },
+      "75": {
+        "$value": "#227800"
+      },
+      "100": {
+        "$value": "#006400"
+      },
+      "$type": "color"
+    },
+    "warning": {
+      "0": {
+        "$value": "#FEF6D9"
+      },
+      "25": {
+        "$value": "#FED850"
+      },
+      "50": {
+        "$value": "#FFA400"
+      },
+      "75": {
+        "$value": "#FF6A00"
+      },
+      "100": {
+        "$value": "#C54300"
+      },
+      "$type": "color"
+    },
+    "error": {
+      "0": {
+        "$value": "#FFE6E9"
+      },
+      "25": {
+        "$value": "#EFA49F"
+      },
+      "50": {
+        "$value": "#EE6868"
+      },
+      "75": {
+        "$value": "#D40023"
+      },
+      "100": {
+        "$value": "#B4001E"
+      },
+      "$type": "color"
+    },
+    "info": {
+      "0": {
+        "$value": "#E3F0FB"
+      },
+      "25": {
+        "$value": "#9FC5F0"
+      },
+      "50": {
+        "$value": "#558EDD"
+      },
+      "75": {
+        "$value": "#3D4089"
+      },
+      "100": {
+        "$value": "#002182"
+      },
+      "$type": "color"
+    }
+  }
+}
