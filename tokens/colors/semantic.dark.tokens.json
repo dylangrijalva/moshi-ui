@@ -1,0 +1,144 @@
+{
+  "$description": "Moshi v0.1 dark semantic color aliases; approved 38 property-driven roles, shared by web and mobile.",
+  "color": {
+    "$type": "color",
+    "background": {
+      "canvas": {
+        "$value": "{color.moshi.neutral.dark.1}"
+      },
+      "surface": {
+        "$value": "{color.moshi.neutral.dark.3}"
+      },
+      "elevated": {
+        "$value": "{color.moshi.neutral.dark.4}"
+      },
+      "selected": {
+        "$value": "{color.moshi.neutral.dark.4}"
+      },
+      "disabled": {
+        "$value": "{color.moshi.neutral.dark.2}"
+      },
+      "inverse": {
+        "$value": "{color.neutral.0}"
+      },
+      "overlay": {
+        "$value": "{color.moshi.alpha.black.60}"
+      },
+      "brand": {
+        "$value": "{color.orange.50}"
+      },
+      "action": {
+        "primary": {
+          "default": {
+            "$value": "{color.blue.75}"
+          },
+          "hover": {
+            "$value": "{color.blue.50}"
+          }
+        },
+        "secondary": {
+          "hover": {
+            "$value": "{color.moshi.blue.dark.1}"
+          }
+        },
+        "destructive": {
+          "default": {
+            "$value": "{color.radix.ruby.dark.8}"
+          },
+          "hover": {
+            "$value": "{color.radix.ruby.dark.7}"
+          }
+        }
+      },
+      "status": {
+        "success": {
+          "$value": "{color.moshi.adjusted.radix.grass.dark.3}"
+        },
+        "warning": {
+          "$value": "{color.radix.amber.dark.3}"
+        },
+        "error": {
+          "$value": "{color.moshi.adjusted.radix.ruby.dark.3}"
+        },
+        "info": {
+          "$value": "{color.radix.blue.dark.3}"
+        }
+      }
+    },
+    "foreground": {
+      "primary": {
+        "$value": "{color.neutral.0}"
+      },
+      "secondary": {
+        "$value": "{color.moshi.alpha.white.80}"
+      },
+      "disabled": {
+        "$value": "{color.moshi.alpha.white.50}"
+      },
+      "inverse": {
+        "$value": "{color.neutral.900}"
+      },
+      "link": {
+        "$value": "{color.moshi.blue.dark.2}"
+      },
+      "onAction": {
+        "primary": {
+          "$value": "{color.neutral.0}"
+        },
+        "destructive": {
+          "$value": "{color.neutral.0}"
+        }
+      },
+      "action": {
+        "secondary": {
+          "$value": "{color.moshi.blue.dark.2}"
+        },
+        "destructive": {
+          "$value": "{color.radix.ruby.dark.11}"
+        }
+      },
+      "status": {
+        "success": {
+          "$value": "{color.radix.grass.dark.11}"
+        },
+        "warning": {
+          "$value": "{color.radix.amber.dark.11}"
+        },
+        "error": {
+          "$value": "{color.radix.ruby.dark.11}"
+        },
+        "info": {
+          "$value": "{color.radix.blue.dark.11}"
+        }
+      }
+    },
+    "border": {
+      "default": {
+        "$value": "{color.moshi.alpha.white.12}"
+      },
+      "strong": {
+        "$value": "{color.moshi.alpha.white.20}"
+      },
+      "interactive": {
+        "$value": "{color.moshi.blue.dark.2}"
+      },
+      "focus": {
+        "$value": "{color.info.50}"
+      },
+      "status": {
+        "success": {
+          "$value": "{color.moshi.adjusted.radix.grass.dark.6}"
+        },
+        "warning": {
+          "$value": "{color.radix.amber.dark.6}"
+        },
+        "error": {
+          "$value": "{color.radix.ruby.dark.6}"
+        },
+        "info": {
+          "$value": "{color.radix.blue.dark.6}"
+        }
+      }
+    }
+  }
+}
