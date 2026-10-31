@@ -1,0 +1,90 @@
+{
+  "$description": "Additional Moshi sRGB primitives. The adjusted.radix branch records approved Moshi HEX values that differ from the pinned Radix 3.0.0 original.",
+  "color": {
+    "moshi": {
+      "$type": "color",
+      "neutral": {
+        "light": {
+          "1": {
+            "$value": "#F0F0F2"
+          }
+        },
+        "dark": {
+          "1": {
+            "$value": "#131419"
+          },
+          "2": {
+            "$value": "#1E222C"
+          },
+          "3": {
+            "$value": "#262A34"
+          },
+          "4": {
+            "$value": "#32353F"
+          }
+        }
+      },
+      "blue": {
+        "dark": {
+          "1": {
+            "$value": "#213554"
+          },
+          "2": {
+            "$value": "#9DA9CA"
+          }
+        }
+      },
+      "alpha": {
+        "black": {
+          "12": {
+            "$value": "#0000001F"
+          },
+          "20": {
+            "$value": "#00000033"
+          },
+          "40": {
+            "$value": "#00000066"
+          },
+          "60": {
+            "$value": "#00000099"
+          }
+        },
+        "white": {
+          "12": {
+            "$value": "#FFFFFF1F"
+          },
+          "20": {
+            "$value": "#FFFFFF33"
+          },
+          "50": {
+            "$value": "#FFFFFF80"
+          },
+          "80": {
+            "$value": "#FFFFFFCC"
+          }
+        }
+      },
+      "adjusted": {
+        "radix": {
+          "grass": {
+            "dark": {
+              "3": {
+                "$value": "#182A1D"
+              },
+              "6": {
+                "$value": "#2D5637"
+              }
+            }
+          },
+          "ruby": {
+            "dark": {
+              "3": {
+                "$value": "#3B121E"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
