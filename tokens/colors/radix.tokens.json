@@ -1,0 +1,119 @@
+{
+  "$description": "Local snapshot of the selected sRGB HEX primitives from @radix-ui/colors@3.0.0, Git tag 3.0.0; official values, without Moshi overrides.",
+  "$extensions": {
+    "moshi.source": "https://github.com/radix-ui/colors/tree/3.0.0/src",
+    "moshi.version": "3.0.0",
+    "moshi.lightGitBlob": "ee3d9d9ba369900bbd66627c818e9469fba1e9d6",
+    "moshi.darkGitBlob": "00056442610170f52602fe138674b7f0208b904d"
+  },
+  "color": {
+    "radix": {
+      "$type": "color",
+      "grass": {
+        "light": {
+          "3": {
+            "$value": "#E9F6E9"
+          },
+          "6": {
+            "$value": "#B2DDB5"
+          },
+          "11": {
+            "$value": "#2A7E3B"
+          }
+        },
+        "dark": {
+          "3": {
+            "$value": "#1B2A1E"
+          },
+          "6": {
+            "$value": "#2D5736"
+          },
+          "11": {
+            "$value": "#71D083"
+          }
+        }
+      },
+      "amber": {
+        "light": {
+          "3": {
+            "$value": "#FFF7C2"
+          },
+          "6": {
+            "$value": "#F3D673"
+          },
+          "12": {
+            "$value": "#4F3422"
+          }
+        },
+        "dark": {
+          "3": {
+            "$value": "#302008"
+          },
+          "6": {
+            "$value": "#5C3D05"
+          },
+          "11": {
+            "$value": "#FFCA16"
+          }
+        }
+      },
+      "ruby": {
+        "light": {
+          "3": {
+            "$value": "#FEEAED"
+          },
+          "6": {
+            "$value": "#F8BFC8"
+          },
+          "11": {
+            "$value": "#CA244D"
+          },
+          "12": {
+            "$value": "#64172B"
+          }
+        },
+        "dark": {
+          "3": {
+            "$value": "#3A141E"
+          },
+          "6": {
+            "$value": "#6F2539"
+          },
+          "7": {
+            "$value": "#883447"
+          },
+          "8": {
+            "$value": "#B3445A"
+          },
+          "11": {
+            "$value": "#FF949D"
+          }
+        }
+      },
+      "blue": {
+        "light": {
+          "3": {
+            "$value": "#E6F4FE"
+          },
+          "6": {
+            "$value": "#ACD8FC"
+          },
+          "12": {
+            "$value": "#113264"
+          }
+        },
+        "dark": {
+          "3": {
+            "$value": "#0D2847"
+          },
+          "6": {
+            "$value": "#104D87"
+          },
+          "11": {
+            "$value": "#70B8FF"
+          }
+        }
+      }
+    }
+  }
+}
