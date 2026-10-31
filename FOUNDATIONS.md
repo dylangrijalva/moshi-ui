@@ -41,21 +41,30 @@ Avoid gratuitous gradients, excessive shadows, glassmorphism, oversized cards, i
 
 ## 3. Color foundations
 
-Moshi's approved **primitive palette** is defined in [`tokens/colors/primitives.tokens.json`](tokens/colors/primitives.tokens.json) and documented in [`COLORS.md`](COLORS.md). This Figma-derived palette replaces the previous indigo/slate placeholder values.
+Moshi v0.1 publishes **38 property-driven semantic colors** in three parents: `color.background` (17), `color.foreground` (13), and `color.border` (8). Each token has approved **light and dark sRGB HEX** values shared by web, iOS, and Android.
 
-The palette includes **orange** (brand family), **blue** (web action reference), **yellow**, **neutral grayscale**, and separate **success, warning, error, and information** ramps.
+The canonical alias files are [light](tokens/colors/semantic.light.tokens.json) and [dark](tokens/colors/semantic.dark.tokens.json). Resolve exactly one theme alongside the primitive files:
 
-Primitive swatches do **not** define their own component usage. Semantic mappings for web/light/dark/mobile are the next milestone and must be validated for accessible contrast before becoming mandatory.
+- [Original Figma-derived primitives](tokens/colors/primitives.tokens.json), whose 45 values are unchanged.
+- [Pinned Radix Colors 3.0.0 sRGB primitives](tokens/colors/radix.tokens.json), copied locally.
+- [Moshi primitive extensions](tokens/colors/extended.tokens.json), including three documented, approved deviations from the pinned Radix dark shades.
+
+See [COLORS.md](COLORS.md) for **all 38 full token names**, both HEX values, primitive alias provenance, and accessibility behavior. Do not assume these values match the original Figma Web/Native semantic assignments; Moshi's web/mobile semantic values are deliberately unified.
 
 ### Color rules
 
-- Treat `tokens/colors/primitives.tokens.json` as the single source of truth for raw hex colors; do not duplicate primitive values in other files.
-- Prefer semantic color roles in product code, not primitive hex values. Where Moshi semantic roles are not defined yet, preserve the application's existing accessible theme or request a proposed mapping for review.
-- Reserve brand colors for identity and deliberate emphasis; do not assume the brand color equals the interactive action color.
-- Use purpose-specific text, background, border, interactive, and status roles once the semantic token layer is approved.
-- Never communicate status or selection through color alone.
-- Validate combinations, focus states, and interactive boundaries against WCAG 2.2 criteria, including light/dark variants when supported.
-- Do not invent missing Figma colors or unapproved platform themes.
+- **Always use semantic aliases** in products and components. Primitive HEX values are implementation details.
+- Preserve neutral surfaces and readable foregrounds. Moshi orange `#FF4C00` is a brand accent; blue `#2B4FB9` is the primary action fill, both consistent across themes.
+- Secondary outlined actions reuse the blue interactive border; default background is transparent, and the hover background is blue-tinted.
+- Pressed states reuse their hover-color tokens. Disabled borders reuse `border.default`; placeholder text reuses `foreground.secondary`.
+- Status families (success, warning, error, info) each expose background, foreground (text and icons), and border. Destructive action colors have separate semantic roles from error status colors.
+- Selection color alone is insufficient to convey selection; include a recognizable secondary indicator where needed.
+- Default focus uses blue `border.focus` `#558EDD`. Add a contextual contrasting neutral band where the blue ring does not have sufficient contrast against surrounding colors.
+- Filled actions use contextual boundaries, not mandatory outlines. Ensure the control remains identifiable, and validate text/icons and focus independently.
+- Brand orange has **no approved `foreground.onBrand` token**. Don't place normal-size white text on it without separately validating readability.
+- Check WCAG 2.2 AA text/non-text requirements on actual foreground/background combinations for both themes, and respect disabled-state exceptions. Review component-level states, not only primitive values.
+
+Run `node scripts/validate-colors.mjs` to validate approved HEX mappings, the pinned Radix subset, primitive aliases and key contrast pairs.
 
 ## 4. Typography
 
