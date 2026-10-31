@@ -1,0 +1,144 @@
+{
+  "$description": "Moshi v0.1 light semantic color aliases; approved 38 property-driven roles, shared by web and mobile.",
+  "color": {
+    "$type": "color",
+    "background": {
+      "canvas": {
+        "$value": "{color.moshi.neutral.light.1}"
+      },
+      "surface": {
+        "$value": "{color.neutral.0}"
+      },
+      "elevated": {
+        "$value": "{color.neutral.0}"
+      },
+      "selected": {
+        "$value": "{color.neutral.50}"
+      },
+      "disabled": {
+        "$value": "{color.neutral.100}"
+      },
+      "inverse": {
+        "$value": "{color.neutral.900}"
+      },
+      "overlay": {
+        "$value": "{color.moshi.alpha.black.40}"
+      },
+      "brand": {
+        "$value": "{color.orange.50}"
+      },
+      "action": {
+        "primary": {
+          "default": {
+            "$value": "{color.blue.75}"
+          },
+          "hover": {
+            "$value": "{color.blue.100}"
+          }
+        },
+        "secondary": {
+          "hover": {
+            "$value": "{color.blue.0}"
+          }
+        },
+        "destructive": {
+          "default": {
+            "$value": "{color.radix.ruby.light.11}"
+          },
+          "hover": {
+            "$value": "{color.radix.ruby.light.12}"
+          }
+        }
+      },
+      "status": {
+        "success": {
+          "$value": "{color.radix.grass.light.3}"
+        },
+        "warning": {
+          "$value": "{color.radix.amber.light.3}"
+        },
+        "error": {
+          "$value": "{color.radix.ruby.light.3}"
+        },
+        "info": {
+          "$value": "{color.radix.blue.light.3}"
+        }
+      }
+    },
+    "foreground": {
+      "primary": {
+        "$value": "{color.neutral.900}"
+      },
+      "secondary": {
+        "$value": "{color.neutral.600}"
+      },
+      "disabled": {
+        "$value": "{color.neutral.500}"
+      },
+      "inverse": {
+        "$value": "{color.neutral.0}"
+      },
+      "link": {
+        "$value": "{color.blue.75}"
+      },
+      "onAction": {
+        "primary": {
+          "$value": "{color.neutral.0}"
+        },
+        "destructive": {
+          "$value": "{color.neutral.0}"
+        }
+      },
+      "action": {
+        "secondary": {
+          "$value": "{color.blue.75}"
+        },
+        "destructive": {
+          "$value": "{color.radix.ruby.light.11}"
+        }
+      },
+      "status": {
+        "success": {
+          "$value": "{color.radix.grass.light.11}"
+        },
+        "warning": {
+          "$value": "{color.radix.amber.light.12}"
+        },
+        "error": {
+          "$value": "{color.radix.ruby.light.11}"
+        },
+        "info": {
+          "$value": "{color.radix.blue.light.12}"
+        }
+      }
+    },
+    "border": {
+      "default": {
+        "$value": "{color.moshi.alpha.black.12}"
+      },
+      "strong": {
+        "$value": "{color.moshi.alpha.black.20}"
+      },
+      "interactive": {
+        "$value": "{color.blue.50}"
+      },
+      "focus": {
+        "$value": "{color.info.50}"
+      },
+      "status": {
+        "success": {
+          "$value": "{color.radix.grass.light.6}"
+        },
+        "warning": {
+          "$value": "{color.radix.amber.light.6}"
+        },
+        "error": {
+          "$value": "{color.radix.ruby.light.6}"
+        },
+        "info": {
+          "$value": "{color.radix.blue.light.6}"
+        }
+      }
+    }
+  }
+}
