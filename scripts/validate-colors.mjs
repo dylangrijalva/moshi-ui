@@ -226,8 +226,19 @@ for(const mode of ['light','dark']){
   }
   resolved[mode]=result;
 }
-const lum=h=>[1,3,5].map(i=>parseInt(h.slice(i,i+2),16)/255).map(v=>v<=0.04045?v/12.92:((v+0.055)/1.055)**2.4).reduce((a,v,i)=>a+v*[0.2126,0.7152,0.0722][i],0);
-const ratio=(a,b)=>{const x=lum(a),y=lum(b);return (Math.max(x,y)+.05)/(Math.min(x,y)+.05)};
+const channels=h=>[1,3,5].map(i=>parseInt(h.slice(i,i+2),16)/255);
+const relativeLuminance=rgb=>rgb.map(v=>v<=0.04045?v/12.92:((v+0.055)/1.055)**2.4).reduce((a,v,i)=>a+v*[0.2126,0.7152,0.0722][i],0);
+const composite=(foreground,background)=>{
+  const fg=channels(foreground),bg=channels(background);
+  if(foreground.length!==9)return fg;
+  const alpha=parseInt(foreground.slice(7,9),16)/255;
+  return fg.map((v,i)=>alpha*v+(1-alpha)*bg[i]);
+};
+const ratio=(foreground,background)=>{
+  assert.equal(background.length,7,'Contrast background must be opaque');
+  const x=relativeLuminance(composite(foreground,background)),y=relativeLuminance(channels(background));
+  return (Math.max(x,y)+.05)/(Math.min(x,y)+.05);
+};
 let pairs=0;
 function check(mode,f,b){
   const x=resolved[mode][f],y=resolved[mode][b];
