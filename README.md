@@ -44,6 +44,16 @@ Moshi Spacing & Layout v0.1 publishes the approved 11-step numeric spacing scale
 
 Validate with `node scripts/validate-spacing.mjs`. Native safe areas, accessible text growth and actual grid reflow require integration tests.
 
+## Shape, surfaces & elevation tokens
+
+Moshi Shape, Surfaces & Elevation v0.1 preserves the six existing radii, adds the standard 1-unit border-width primitive and defines **two optional subtle shadow elevations** in light and dark themes. Flat surfaces, existing semantic colors and subtle borders remain the default.
+
+- [Shape, surfaces & elevation specification](SHAPE.md)
+- [Shape primitives](tokens/shape/primitives.tokens.json)
+- Theme-specific elevation: [Light](tokens/shape/elevation.light.tokens.json) · [Dark](tokens/shape/elevation.dark.tokens.json)
+
+Validate with `node scripts/validate-shape.mjs`. Real web/mobile rendering requires integration tests.
+
 ## Status
 
 🚧 **Work in progress** — Moshi is in its early development stage.

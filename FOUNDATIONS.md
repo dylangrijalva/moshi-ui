@@ -171,6 +171,18 @@ Moshi is mostly flat. Use borders and changes in surface tone before adding shad
 - Use at most two subtle elevation levels when layering needs them (for example, menus and dialogs). Exact shadow tokens are deferred to the token implementation.
 - Do not combine strong shadows with high-contrast borders unless needed for usability.
 
+### Approved Shape, Surfaces & Elevation v0.1
+
+See [SHAPE.md](SHAPE.md) for source architecture, exact light/dark elevations, platform adapters and usage rules. The six radii above are published unchanged in [shape primitives](tokens/shape/primitives.tokens.json), along with `border.width.default = 1` (CSS px / iOS pt / Android dp).
+
+- Prefer existing `color.background.canvas`, `.surface` and `.elevated` with `color.border.default` / `.strong` for hierarchy. No new surface colors have been introduced.
+- Flat is the default. Only two opt-in shadow levels exist: `elevation.level1` (0 / 4 offset, 12 blur) for subtle floating surfaces, and `elevation.level2` (0 / 8 offset, 24 blur) for prominent transient surfaces. Both use zero spread and previously approved alpha black colors appropriate to the active theme.
+- Select only one elevation level where surface tone and border alone are insufficient; never stack them. The drop shadow is not the `color.background.overlay` scrim and not a substitute for focus contrast.
+- `radius.full` remains the approved 9999 fully-rounded sentinel; platforms may render it as a native capsule/circle.
+- Light/dark source tokens are [light elevation](tokens/shape/elevation.light.tokens.json) and [dark elevation](tokens/shape/elevation.dark.tokens.json). Geometry references the existing spacing scale; no Color, Typography, or Spacing tokens have been changed.
+
+Run `node scripts/validate-shape.mjs` for static checks. App-level web/native shadow rendering and accessible boundaries still require integration testing.
+
 ## 7. Controls, states, and density
 
 Documented components will live in **COMPONENTS.md**. These are the shared rules they must follow.
@@ -272,7 +284,7 @@ When implementing UI with Moshi:
 This is **Moshi v0.1**, intentionally small. It defines shared visual foundations, not a finished design library.
 
 **Next artifacts:**
-1. **Color, typography, and spacing/layout source tokens** — implemented and documented. Next: cross-platform consumption/export adapters and representative app validation.
+1. **Color, typography, spacing/layout, and shape/elevation source tokens** — implemented and documented. Next: cross-platform consumption/export adapters and representative app validation.
 2. **COMPONENTS.md** — approved component anatomy, variants, interaction states, and usage.
 3. **AGENTS.md** — a short operational entry point telling agents where to read Moshi rules.
 4. **examples/** — one real screen used to validate and refine the system.

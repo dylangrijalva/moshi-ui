@@ -1,0 +1,36 @@
+name: Validate Moshi shape and elevation tokens
+
+on:
+  push:
+    paths:
+      - 'tokens/shape/**'
+      - 'tokens/spacing/primitives.tokens.json'
+      - 'tokens/colors/extended.tokens.json'
+      - 'scripts/validate-shape.mjs'
+      - 'SHAPE.md'
+      - 'FOUNDATIONS.md'
+      - '.github/workflows/validate-shape.yml'
+  pull_request:
+    paths:
+      - 'tokens/shape/**'
+      - 'tokens/spacing/primitives.tokens.json'
+      - 'tokens/colors/extended.tokens.json'
+      - 'scripts/validate-shape.mjs'
+      - 'SHAPE.md'
+      - 'FOUNDATIONS.md'
+      - '.github/workflows/validate-shape.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate approved radii, borders and theme elevations
+        run: node scripts/validate-shape.mjs

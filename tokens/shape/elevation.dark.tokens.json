@@ -1,0 +1,38 @@
+{
+  "$description": "Moshi Shape v0.1 dark elevation. Two subtle opt-in shadow roles; flat surfaces are the default. Geometry uses approved numeric spacing primitives and existing Moshi color alpha primitives.",
+  "$extensions": {
+    "moshi.version": "0.1",
+    "moshi.theme": "dark",
+    "moshi.unitResolution": {
+      "web": "px",
+      "ios": "pt",
+      "android": "dp"
+    },
+    "moshi.rendering": "Platform adapters implement the same intended visual hierarchy; iOS/Android shadow APIs differ from CSS and require representative application verification.",
+    "moshi.default": "none"
+  },
+  "elevation": {
+    "level1": {
+      "$type": "shadow",
+      "$value": {
+        "offsetX": "{space.0}",
+        "offsetY": "{space.1}",
+        "blur": "{space.3}",
+        "spread": "{space.0}",
+        "color": "{color.moshi.alpha.black.20}"
+      },
+      "$description": "Optional subtle shadow for small floating surfaces, after appropriate tone/border differentiation."
+    },
+    "level2": {
+      "$type": "shadow",
+      "$value": {
+        "offsetX": "{space.0}",
+        "offsetY": "{space.2}",
+        "blur": "{space.6}",
+        "spread": "{space.0}",
+        "color": "{color.moshi.alpha.black.40}"
+      },
+      "$description": "Optional stronger but restrained shadow for dialogs or prominent floating surfaces; do not layer multiple elevation presets."
+    }
+  }
+}
