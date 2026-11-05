@@ -1,0 +1,65 @@
+{
+  "$description": "Moshi v0.1 android semantic typography styles. Six approved semantic roles; no colors or component-specific typography variants.",
+  "typography": {
+    "display": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font.family.android.sans}",
+        "fontSize": "{font.size.android.32}",
+        "fontWeight": "{font.weight.semibold}",
+        "lineHeight": "{font.lineHeight.android.40}",
+        "letterSpacing": "{font.letterSpacing.display}"
+      }
+    },
+    "heading": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font.family.android.sans}",
+        "fontSize": "{font.size.android.24}",
+        "fontWeight": "{font.weight.semibold}",
+        "lineHeight": "{font.lineHeight.android.32}",
+        "letterSpacing": "{font.letterSpacing.heading}"
+      }
+    },
+    "subheading": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font.family.android.sans}",
+        "fontSize": "{font.size.android.20}",
+        "fontWeight": "{font.weight.medium}",
+        "lineHeight": "{font.lineHeight.android.28}",
+        "letterSpacing": "{font.letterSpacing.normal}"
+      }
+    },
+    "body": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font.family.android.sans}",
+        "fontSize": "{font.size.android.16}",
+        "fontWeight": "{font.weight.regular}",
+        "lineHeight": "{font.lineHeight.android.24}",
+        "letterSpacing": "{font.letterSpacing.normal}"
+      }
+    },
+    "small": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font.family.android.sans}",
+        "fontSize": "{font.size.android.14}",
+        "fontWeight": "{font.weight.regular}",
+        "lineHeight": "{font.lineHeight.android.20}",
+        "letterSpacing": "{font.letterSpacing.normal}"
+      }
+    },
+    "caption": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font.family.android.sans}",
+        "fontSize": "{font.size.android.12}",
+        "fontWeight": "{font.weight.regular}",
+        "lineHeight": "{font.lineHeight.android.16}",
+        "letterSpacing": "{font.letterSpacing.normal}"
+      }
+    }
+  }
+}
