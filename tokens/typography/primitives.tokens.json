@@ -1,0 +1,293 @@
+{
+  "$description": "Moshi Typography v0.1 primitive font families, weights, baseline sizes, absolute line heights and tracking. Platform-aware, DTCG-inspired internal JSON; pt/sp/em string dimensions and explicit absolute line heights are not DTCG 2025.10 typography-compliant.",
+  "$extensions": {
+    "moshi.version": "0.1",
+    "moshi.format": "internal-typography-v0.1",
+    "moshi.units": {
+      "web": "px",
+      "ios": "pt",
+      "android": "sp"
+    },
+    "moshi.note": "Only baseline values: implement Dynamic Type and nonlinear native font scaling in consuming adapters; do not cap accessibility text size."
+  },
+  "font": {
+    "family": {
+      "web": {
+        "sans": {
+          "$type": "fontFamily",
+          "$value": [
+            "Inter",
+            "system-ui",
+            "sans-serif"
+          ],
+          "$description": "Inter is preferred when provided by the consumer; Moshi does not bundle or load it."
+        },
+        "mono": {
+          "$type": "fontFamily",
+          "$value": [
+            "ui-monospace",
+            "SFMono-Regular",
+            "Menlo",
+            "Monaco",
+            "Consolas",
+            "Liberation Mono",
+            "monospace"
+          ],
+          "$description": "Use the host platform's available monospace fonts."
+        }
+      },
+      "ios": {
+        "sans": {
+          "$type": "fontFamily",
+          "$value": "system",
+          "$description": "Symbolic native font identifier: resolve via UIFont.systemFont / SwiftUI .system."
+        },
+        "mono": {
+          "$type": "fontFamily",
+          "$value": "system-monospace",
+          "$description": "Symbolic native monospace identifier: resolve via UIFont.monospacedSystemFont or SwiftUI .system(.body,design:.monospaced)."
+        }
+      },
+      "android": {
+        "sans": {
+          "$type": "fontFamily",
+          "$value": "sans-serif",
+          "$description": "Android platform sans-serif / Compose FontFamily.Default."
+        },
+        "mono": {
+          "$type": "fontFamily",
+          "$value": "monospace",
+          "$description": "Android platform monospace / Compose FontFamily.Monospace."
+        }
+      }
+    },
+    "weight": {
+      "regular": {
+        "$type": "fontWeight",
+        "$value": 400
+      },
+      "medium": {
+        "$type": "fontWeight",
+        "$value": 500
+      },
+      "semibold": {
+        "$type": "fontWeight",
+        "$value": 600
+      },
+      "bold": {
+        "$type": "fontWeight",
+        "$value": 700,
+        "$description": "Use sparingly; controlled override, not a default semantic style."
+      }
+    },
+    "size": {
+      "web": {
+        "12": {
+          "$type": "dimension",
+          "$value": "12px"
+        },
+        "14": {
+          "$type": "dimension",
+          "$value": "14px"
+        },
+        "16": {
+          "$type": "dimension",
+          "$value": "16px"
+        },
+        "18": {
+          "$type": "dimension",
+          "$value": "18px"
+        },
+        "24": {
+          "$type": "dimension",
+          "$value": "24px"
+        },
+        "30": {
+          "$type": "dimension",
+          "$value": "30px"
+        }
+      },
+      "ios": {
+        "12": {
+          "$type": "dimension",
+          "$value": "12pt"
+        },
+        "15": {
+          "$type": "dimension",
+          "$value": "15pt"
+        },
+        "17": {
+          "$type": "dimension",
+          "$value": "17pt"
+        },
+        "20": {
+          "$type": "dimension",
+          "$value": "20pt"
+        },
+        "24": {
+          "$type": "dimension",
+          "$value": "24pt"
+        },
+        "32": {
+          "$type": "dimension",
+          "$value": "32pt"
+        }
+      },
+      "android": {
+        "12": {
+          "$type": "dimension",
+          "$value": "12sp"
+        },
+        "14": {
+          "$type": "dimension",
+          "$value": "14sp"
+        },
+        "16": {
+          "$type": "dimension",
+          "$value": "16sp"
+        },
+        "20": {
+          "$type": "dimension",
+          "$value": "20sp"
+        },
+        "24": {
+          "$type": "dimension",
+          "$value": "24sp"
+        },
+        "32": {
+          "$type": "dimension",
+          "$value": "32sp"
+        }
+      }
+    },
+    "lineHeight": {
+      "web": {
+        "16": {
+          "$type": "dimension",
+          "$value": "16px",
+          "$description": "Baseline absolute line height; allow adjustment for platform font scaling and font metrics."
+        },
+        "20": {
+          "$type": "dimension",
+          "$value": "20px",
+          "$description": "Baseline absolute line height; allow adjustment for platform font scaling and font metrics."
+        },
+        "24": {
+          "$type": "dimension",
+          "$value": "24px",
+          "$description": "Baseline absolute line height; allow adjustment for platform font scaling and font metrics."
+        },
+        "26": {
+          "$type": "dimension",
+          "$value": "26px",
+          "$description": "Baseline absolute line height; allow adjustment for platform font scaling and font metrics."
+        },
+        "32": {
+          "$type": "dimension",
+          "$value": "32px",
+          "$description": "Baseline absolute line height; allow adjustment for platform font scaling and font metrics."
+        },
+        "38": {
+          "$type": "dimension",
+          "$value": "38px",
+          "$description": "Baseline absolute line height; allow adjustment for platform font scaling and font metrics."
+        }
+      },
+      "ios": {
+        "16": {
+          "$type": "dimension",
+          "$value": "16pt",
+          "$description": "Baseline absolute line height; allow adjustment for platform font scaling and font metrics."
+        },
+        "22": {
+          "$type": "dimension",
+          "$value": "22pt",
+          "$description": "Baseline absolute line height; allow adjustment for platform font scaling and font metrics."
+        },
+        "26": {
+          "$type": "dimension",
+          "$value": "26pt",
+          "$description": "Baseline absolute line height; allow adjustment for platform font scaling and font metrics."
+        },
+        "28": {
+          "$type": "dimension",
+          "$value": "28pt",
+          "$description": "Baseline absolute line height; allow adjustment for platform font scaling and font metrics."
+        },
+        "32": {
+          "$type": "dimension",
+          "$value": "32pt",
+          "$description": "Baseline absolute line height; allow adjustment for platform font scaling and font metrics."
+        },
+        "40": {
+          "$type": "dimension",
+          "$value": "40pt",
+          "$description": "Baseline absolute line height; allow adjustment for platform font scaling and font metrics."
+        }
+      },
+      "android": {
+        "16": {
+          "$type": "dimension",
+          "$value": "16sp",
+          "$description": "Baseline absolute line height; allow adjustment for platform font scaling and font metrics."
+        },
+        "20": {
+          "$type": "dimension",
+          "$value": "20sp",
+          "$description": "Baseline absolute line height; allow adjustment for platform font scaling and font metrics."
+        },
+        "24": {
+          "$type": "dimension",
+          "$value": "24sp",
+          "$description": "Baseline absolute line height; allow adjustment for platform font scaling and font metrics."
+        },
+        "28": {
+          "$type": "dimension",
+          "$value": "28sp",
+          "$description": "Baseline absolute line height; allow adjustment for platform font scaling and font metrics."
+        },
+        "32": {
+          "$type": "dimension",
+          "$value": "32sp",
+          "$description": "Baseline absolute line height; allow adjustment for platform font scaling and font metrics."
+        },
+        "40": {
+          "$type": "dimension",
+          "$value": "40sp",
+          "$description": "Baseline absolute line height; allow adjustment for platform font scaling and font metrics."
+        }
+      }
+    },
+    "letterSpacing": {
+      "display": {
+        "$type": "dimension",
+        "$value": "-0.02em",
+        "$description": "Tracking relative to current scaled font size."
+      },
+      "heading": {
+        "$type": "dimension",
+        "$value": "-0.01em",
+        "$description": "Tracking relative to current scaled font size."
+      },
+      "normal": {
+        "$type": "dimension",
+        "$value": "0",
+        "$description": "No extra tracking."
+      }
+    },
+    "feature": {
+      "numerals": {
+        "proportional": {
+          "$type": "fontFeature",
+          "$value": "normal",
+          "$description": "Default proportional numerals; do not require a monospace typeface."
+        },
+        "tabular": {
+          "$type": "fontFeature",
+          "$value": "tnum",
+          "$description": "Optional OpenType tabular-figures feature where supported, applied by platform adapter."
+        }
+      }
+    }
+  }
+}
