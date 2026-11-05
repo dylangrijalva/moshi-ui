@@ -68,26 +68,49 @@ Run `node scripts/validate-colors.mjs` to validate approved HEX mappings, the pi
 
 ## 4. Typography
 
-Moshi uses a modern sans-serif with a neutral, highly legible appearance.
+Moshi Typography v0.1 defines **six semantic text styles** and a primitive-plus-semantic architecture. Source tokens:
 
-- **Web font stack:** Inter, system-ui, sans-serif (load Inter only if the product chooses to bundle or serve it).
-- **Mobile:** prefer each platform's system font and native text scaling unless a product has a documented reason not to.
-- **Weights:** 400 regular, 500 medium, 600 semibold. Use 700 sparingly.
-- **Alignment:** left-align body copy and dense information by default. Right-align numeric table columns where helpful.
-- **Case:** use sentence case for headings, labels, tabs, and buttons. Do not use all caps for routine interface labels.
+- [Typography specifications and complete platform scales](TYPOGRAPHY.md).
+- [Typography primitives](tokens/typography/primitives.tokens.json).
+- [Semantic web](tokens/typography/semantic.web.tokens.json), [iOS](tokens/typography/semantic.ios.tokens.json), and [Android](tokens/typography/semantic.android.tokens.json) mappings.
 
-| Role | Web size / line height | Guidance |
-| --- | --- | --- |
-| Caption | 12px / 16px | Supplementary, noncritical metadata only |
-| Small | 14px / 20px | Compact controls, table cells, secondary UI |
-| Body | 16px / 24px | Reading content, forms, default prose |
-| Subheading | 18px / 26px | Section titles |
-| Heading | 24px / 32px | Page titles |
-| Display | 30px / 38px | Rare, high-level introductions |
+### Font families
 
-For dense desktop application areas, 14px / 20px is acceptable for primary UI labels when contrast and readability are maintained. On mobile, prefer 16px for body text and respect operating-system text size settings.
+- **Web:** Inter, system-ui, sans-serif. Consumers may load Inter, but Moshi does not bundle or require it.
+- **iOS:** Native Apple system sans-serif; native system monospace when technical content requests it.
+- **Android:** Native system sans-serif; native system monospace when technical content requests it.
+- **Web monospace:** `ui-monospace` with platform-specific system fallbacks.
+- Monospace is an optional family choice, not an additional semantic text style.
 
-Do not encode hierarchy using font size alone; combine size with weight, spacing, and placement.
+### Approved semantic scale
+
+Values are **font size / baseline line height**. Weight and tracking are the shared style defaults.
+
+| Style | Web (px) | iOS (pt) | Android (sp) | Weight | Tracking |
+| --- | --- | --- | --- | ---: | ---: |
+| `typography.display` | 30 / 38 | 32 / 40 | 32 / 40 | 600 | `-0.02em` |
+| `typography.heading` | 24 / 32 | 24 / 32 | 24 / 32 | 600 | `-0.01em` |
+| `typography.subheading` | 18 / 26 | 20 / 28 | 20 / 28 | 500 | `0` |
+| `typography.body` | 16 / 24 | 17 / 26 | 16 / 24 | 400 | `0` |
+| `typography.small` | 14 / 20 | 15 / 22 | 14 / 20 | 400 | `0` |
+| `typography.caption` | 12 / 16 | 12 / 16 | 12 / 16 | 400 | `0` |
+
+The only font-weight primitives are **400 regular**, **500 medium**, **600 semibold**, and **700 bold** (use sparingly). Approved primitive weights may be used as **controlled overrides** without creating new semantic text styles.
+
+### Typography behavior and accessibility
+
+- **Platform-specific metrics, shared roles:** The six semantic names are identical across web, iOS and Android, but each platform resolves its own approved baseline font size and line height.
+- **Web responsiveness:** Keep the six approved web baseline metrics at every viewport width, while allowing responsive layouts, browser zoom and user text adjustments.
+- **Native scaling:** Respect iOS Dynamic Type and Android user font preferences, including nonlinear font scaling where supported. Line heights and containers adapt without clipping or imposing a cap on text scaling.
+- **Letter spacing:** Display `-0.02em`; heading `-0.01em`; all other styles `0`. Negative `em` tracking is relative to rendered text size.
+- **Optional tabular numerals:** Proportional numbers by default; enable the font's `tnum` feature for tables, counters, and financial metrics when supported.
+- **Independent color semantics:** Typography styles never embed colors; compose with approved `color.foreground.*` tokens.
+- **Usage:** Left-align body and dense UI text by default; right-align numeric table columns where helpful. Use sentence case for headings, labels, tabs, and buttons. Avoid all caps for ordinary interface labels.
+- **Content hierarchy:** Caption text is supplementary only. In dense desktop UIs, 14px / 20px may be used for primary labels if readable; do not encode hierarchy in size alone.
+
+The machine-readable sources intentionally use an **internal DTCG-inspired** convention for absolute `px`, `pt`, `sp` and `em` metrics. They are not yet strict DTCG 2025.10 JSON. See [TYPOGRAPHY.md](TYPOGRAPHY.md) for source-unit and adapter conventions.
+
+Run `node scripts/validate-typography.mjs` for static validation. Actual native text scaling and reflow must be tested in consuming apps.
 
 ## 5. Spacing and layout
 
@@ -235,7 +258,7 @@ When implementing UI with Moshi:
 This is **Moshi v0.1**, intentionally small. It defines shared visual foundations, not a finished design library.
 
 **Next artifacts:**
-1. **tokens/colors/primitives.tokens.json** — defined. Next: semantic color/theme mappings validated against real interfaces.
+1. **Color and typography source tokens** — implemented and documented. Next: cross-platform consumption/export adapters and representative app validation.
 2. **COMPONENTS.md** — approved component anatomy, variants, interaction states, and usage.
 3. **AGENTS.md** — a short operational entry point telling agents where to read Moshi rules.
 4. **examples/** — one real screen used to validate and refine the system.
