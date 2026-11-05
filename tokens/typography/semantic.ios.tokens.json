@@ -1,0 +1,83 @@
+{
+  "$description": "Moshi v0.1 ios semantic typography styles. Six approved semantic roles; no colors or component-specific typography variants.",
+  "typography": {
+    "display": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font.family.ios.sans}",
+        "fontSize": "{font.size.ios.32}",
+        "fontWeight": "{font.weight.semibold}",
+        "lineHeight": "{font.lineHeight.ios.40}",
+        "letterSpacing": "{font.letterSpacing.display}"
+      },
+      "$extensions": {
+        "moshi.ios.dynamicTypeStyle": "largeTitle"
+      }
+    },
+    "heading": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font.family.ios.sans}",
+        "fontSize": "{font.size.ios.24}",
+        "fontWeight": "{font.weight.semibold}",
+        "lineHeight": "{font.lineHeight.ios.32}",
+        "letterSpacing": "{font.letterSpacing.heading}"
+      },
+      "$extensions": {
+        "moshi.ios.dynamicTypeStyle": "title2"
+      }
+    },
+    "subheading": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font.family.ios.sans}",
+        "fontSize": "{font.size.ios.20}",
+        "fontWeight": "{font.weight.medium}",
+        "lineHeight": "{font.lineHeight.ios.28}",
+        "letterSpacing": "{font.letterSpacing.normal}"
+      },
+      "$extensions": {
+        "moshi.ios.dynamicTypeStyle": "title3"
+      }
+    },
+    "body": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font.family.ios.sans}",
+        "fontSize": "{font.size.ios.17}",
+        "fontWeight": "{font.weight.regular}",
+        "lineHeight": "{font.lineHeight.ios.26}",
+        "letterSpacing": "{font.letterSpacing.normal}"
+      },
+      "$extensions": {
+        "moshi.ios.dynamicTypeStyle": "body"
+      }
+    },
+    "small": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font.family.ios.sans}",
+        "fontSize": "{font.size.ios.15}",
+        "fontWeight": "{font.weight.regular}",
+        "lineHeight": "{font.lineHeight.ios.22}",
+        "letterSpacing": "{font.letterSpacing.normal}"
+      },
+      "$extensions": {
+        "moshi.ios.dynamicTypeStyle": "subheadline"
+      }
+    },
+    "caption": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font.family.ios.sans}",
+        "fontSize": "{font.size.ios.12}",
+        "fontWeight": "{font.weight.regular}",
+        "lineHeight": "{font.lineHeight.ios.16}",
+        "letterSpacing": "{font.letterSpacing.normal}"
+      },
+      "$extensions": {
+        "moshi.ios.dynamicTypeStyle": "caption1"
+      }
+    }
+  }
+}
