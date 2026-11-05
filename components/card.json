@@ -1,0 +1,69 @@
+{
+  "$description": "Quiet content surface. Noninteractive by default; a card is not automatically a button or link.",
+  "id": "card",
+  "name": "Card",
+  "version": "0.1",
+  "status": "specified",
+  "role": "surface",
+  "anatomy": [
+    "container",
+    "optional header",
+    "body",
+    "optional footer"
+  ],
+  "variants": [
+    "outlined",
+    "plain"
+  ],
+  "sizes": [
+    "default",
+    "comfortable"
+  ],
+  "states": [
+    "default"
+  ],
+  "tokens": {
+    "radius": "radius.lg",
+    "borderWidth": "border.width.default",
+    "padding": {
+      "default": "space.4",
+      "comfortable": "space.6"
+    },
+    "sectionGap": "space.3",
+    "typography": "typography.body",
+    "titleTypography": "typography.subheading",
+    "colors": {
+      "background": "color.background.surface",
+      "border": "color.border.default",
+      "heading": "color.foreground.primary",
+      "body": "color.foreground.primary",
+      "secondary": "color.foreground.secondary"
+    },
+    "elevation": "none"
+  },
+  "behavior": {
+    "interaction": "Informational card container is noninteractive; expose explicit button/link actions within it.",
+    "border": "Outlined is the default, plain omits its border. No elevation by default.",
+    "layout": "Natural height; in equal-height grids the card surface may stretch to fill its row."
+  },
+  "accessibility": [
+    "Use semantic article/section containers where appropriate; do not add role=button to a noninteractive card.",
+    "Headings follow a meaningful document hierarchy.",
+    "Never make the entire card clickable in addition to nested interactive controls."
+  ],
+  "platforms": {
+    "web": [
+      "Use semantic HTML controls, keyboard focus-visible, and 24×24 CSS px minimum targets; prefer more space for touch.",
+      "Retain browser zoom and allow labels to wrap or controls to grow.",
+      "Use <article> or <section> for meaningful grouped content."
+    ],
+    "ios": [
+      "Respect 44pt minimum interactive hit area and Dynamic Type; prefer native Button/Control semantics.",
+      "Use native enabled/disabled and accessibility label/state APIs."
+    ],
+    "android": [
+      "Respect 48dp minimum interactive target and nonlinear font scaling; prefer native Compose/View control semantics.",
+      "Use native enabled/disabled and accessibility semantics."
+    ]
+  }
+}

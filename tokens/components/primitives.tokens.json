@@ -1,0 +1,47 @@
+{
+  "$description": "Moshi Components v0.1 shared control sizing primitives. Existing desktop visual control heights and platform minimum pointer/touch targets; logical numeric measurements.",
+  "$extensions": {
+    "moshi.version": "0.1",
+    "moshi.format": "internal-component-primitives-v0.1",
+    "moshi.units": {
+      "web": "px",
+      "ios": "pt",
+      "android": "dp"
+    },
+    "moshi.note": "Web heights are minimum visual heights that may grow with content. Platform targets are minimum interactive hit areas; do not cap text scaling."
+  },
+  "control": {
+    "height": {
+      "web": {
+        "compact": {
+          "$type": "number",
+          "$value": 32
+        },
+        "default": {
+          "$type": "number",
+          "$value": 36
+        },
+        "comfortable": {
+          "$type": "number",
+          "$value": 40
+        }
+      }
+    },
+    "hitTarget": {
+      "minimum": {
+        "web": {
+          "$type": "number",
+          "$value": 24
+        },
+        "ios": {
+          "$type": "number",
+          "$value": 44
+        },
+        "android": {
+          "$type": "number",
+          "$value": 48
+        }
+      }
+    }
+  }
+}

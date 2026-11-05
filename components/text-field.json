@@ -1,0 +1,96 @@
+{
+  "$description": "Single-line editable text field with persistent label and optional help, error, prefix or suffix.",
+  "id": "text-field",
+  "name": "Text Field",
+  "version": "0.1",
+  "status": "specified",
+  "role": "form",
+  "anatomy": [
+    "field container",
+    "persistent label",
+    "input",
+    "optional prefix",
+    "optional suffix",
+    "optional help text",
+    "optional error message"
+  ],
+  "variants": [
+    "default"
+  ],
+  "sizes": [
+    "compact",
+    "default",
+    "comfortable"
+  ],
+  "states": [
+    "default",
+    "hover",
+    "focus-visible",
+    "disabled",
+    "read-only",
+    "invalid"
+  ],
+  "tokens": {
+    "radius": "radius.md",
+    "borderWidth": "border.width.default",
+    "typography": "typography.body",
+    "labelTypography": "typography.small",
+    "helpTypography": "typography.small",
+    "labelWeight": "font.weight.medium",
+    "labelGap": "space.2",
+    "messageGap": "space.2",
+    "paddingInline": "space.3",
+    "paddingBlock": "space.1",
+    "webMinHeight": {
+      "compact": "control.height.web.compact",
+      "default": "control.height.web.default",
+      "comfortable": "control.height.web.comfortable"
+    },
+    "minHitTarget": {
+      "web": "control.hitTarget.minimum.web",
+      "ios": "control.hitTarget.minimum.ios",
+      "android": "control.hitTarget.minimum.android"
+    },
+    "colors": {
+      "background": "color.background.surface",
+      "foreground": "color.foreground.primary",
+      "placeholder": "color.foreground.secondary",
+      "label": "color.foreground.primary",
+      "help": "color.foreground.secondary",
+      "border": "color.border.default",
+      "hoverBorder": "color.border.strong",
+      "focusBorder": "color.border.focus",
+      "invalidBorder": "color.border.status.error",
+      "invalidMessage": "color.foreground.status.error",
+      "disabledBackground": "color.background.disabled",
+      "disabledForeground": "color.foreground.disabled"
+    }
+  },
+  "behavior": {
+    "label": "Always persistently visible; placeholder is not a label.",
+    "error": "Show actionable textual feedback and indicate invalid state programmatically; do not rely on red border alone.",
+    "readOnly": "Retain focusability and value selection when applicable; do not style as disabled.",
+    "resize": "Content and helper/error text must wrap and the field must not clip enlarged text."
+  },
+  "accessibility": [
+    "Associate label with input; connect descriptions and error messages via accessibility APIs (aria-describedby on web).",
+    "Expose required/invalid/read-only/disabled states natively; never disable just to show validation.",
+    "Do not announce every keystroke as an error; communicate validation at appropriate moments.",
+    "Ensure a visible focus indicator with contextual contrast as necessary."
+  ],
+  "platforms": {
+    "web": [
+      "Use semantic HTML controls, keyboard focus-visible, and 24×24 CSS px minimum targets; prefer more space for touch.",
+      "Retain browser zoom and allow labels to wrap or controls to grow.",
+      "Use <label for> and <input>; aria-invalid with readable error text when invalid."
+    ],
+    "ios": [
+      "Respect 44pt minimum interactive hit area and Dynamic Type; prefer native Button/Control semantics.",
+      "Use native enabled/disabled and accessibility label/state APIs."
+    ],
+    "android": [
+      "Respect 48dp minimum interactive target and nonlinear font scaling; prefer native Compose/View control semantics.",
+      "Use native enabled/disabled and accessibility semantics."
+    ]
+  }
+}

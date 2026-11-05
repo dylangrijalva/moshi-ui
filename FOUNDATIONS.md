@@ -185,7 +185,7 @@ Run `node scripts/validate-shape.mjs` for static checks. App-level web/native sh
 
 ## 7. Controls, states, and density
 
-Documented components will live in **COMPONENTS.md**. These are the shared rules they must follow.
+The first six framework-neutral component contracts are documented in [COMPONENTS.md](COMPONENTS.md), with machine-readable sources in [components/](components/) and approved control sizing in [tokens/components/primitives.tokens.json](tokens/components/primitives.tokens.json). These shared rules remain authoritative:
 
 - Desktop control heights: **32px compact**, **36px default**, **40px comfortable**. These are visual sizing presets, not universal target-size exemptions.
 - Touch interfaces need larger hit targets: aim for at least **44pt on iOS** or **48dp on Android**, using transparent hit areas if necessary.
@@ -195,6 +195,8 @@ Documented components will live in **COMPONENTS.md**. These are the shared rules
 - Destructive actions must be distinguishable and should confirm when consequences are difficult to reverse.
 - Forms need persistent labels, clear help text when needed, and actionable inline errors. Placeholders never replace labels.
 - Loading states must avoid unexpected layout shifts. Empty and error states should explain the next available action.
+
+Run `node scripts/validate-components.mjs` to validate the six v0.1 contracts and approved token references. The [browser reference](examples/components.html) is demonstrative, not a production cross-platform component package.
 
 ## 8. Accessibility baseline
 

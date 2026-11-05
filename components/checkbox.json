@@ -1,0 +1,76 @@
+{
+  "$description": "Binary or mixed-state selection control with native semantics, persistent visible label and touch-friendly target.",
+  "id": "checkbox",
+  "name": "Checkbox",
+  "version": "0.1",
+  "status": "specified",
+  "role": "form",
+  "anatomy": [
+    "checkbox input",
+    "indicator",
+    "check or indeterminate mark",
+    "label",
+    "optional supporting description"
+  ],
+  "variants": [
+    "default"
+  ],
+  "sizes": [
+    "default"
+  ],
+  "states": [
+    "unchecked",
+    "checked",
+    "indeterminate",
+    "focus-visible",
+    "disabled"
+  ],
+  "tokens": {
+    "radius": "radius.sm",
+    "borderWidth": "border.width.default",
+    "typography": "typography.body",
+    "gap": "space.2",
+    "visualSize": 16,
+    "minHitTarget": {
+      "web": "control.hitTarget.minimum.web",
+      "ios": "control.hitTarget.minimum.ios",
+      "android": "control.hitTarget.minimum.android"
+    },
+    "colors": {
+      "uncheckedBackground": "color.background.surface",
+      "uncheckedBorder": "color.border.default",
+      "checkedBackground": "color.background.action.primary.default",
+      "checkedForeground": "color.foreground.onAction.primary",
+      "label": "color.foreground.primary",
+      "disabledForeground": "color.foreground.disabled",
+      "disabledBackground": "color.background.disabled",
+      "focusBorder": "color.border.focus"
+    }
+  },
+  "behavior": {
+    "interaction": "Toggle via label and control, supporting keyboard Space on web.",
+    "indeterminate": "Mixed is a programmatic state, not a third permanently cycling value; activation follows application-defined behavior.",
+    "disabled": "Disable input and label interaction, with programmatic and visible states."
+  },
+  "accessibility": [
+    "Use actual checkbox semantics and expose checked, unchecked and mixed states appropriately.",
+    "Provide an associated label; do not require precise taps on the visual 16px box.",
+    "Selection must be communicated by the checkmark/mixed mark, never color alone.",
+    "Keep the combined label/control hit area at platform-appropriate minimum size."
+  ],
+  "platforms": {
+    "web": [
+      "Use semantic HTML controls, keyboard focus-visible, and 24×24 CSS px minimum targets; prefer more space for touch.",
+      "Retain browser zoom and allow labels to wrap or controls to grow.",
+      "Use <input type=checkbox>; set the indeterminate DOM property for mixed state when needed."
+    ],
+    "ios": [
+      "Respect 44pt minimum interactive hit area and Dynamic Type; prefer native Button/Control semantics.",
+      "Use native enabled/disabled and accessibility label/state APIs."
+    ],
+    "android": [
+      "Respect 48dp minimum interactive target and nonlinear font scaling; prefer native Compose/View control semantics.",
+      "Use native enabled/disabled and accessibility semantics."
+    ]
+  }
+}

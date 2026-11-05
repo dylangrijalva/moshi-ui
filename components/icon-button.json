@@ -1,0 +1,71 @@
+{
+  "$description": "Icon-only action that inherits all Button variants and sizing, but requires an explicit accessible name.",
+  "id": "icon-button",
+  "name": "Icon Button",
+  "version": "0.1",
+  "status": "specified",
+  "role": "action",
+  "anatomy": [
+    "root",
+    "icon",
+    "optional tooltip",
+    "optional loading indicator"
+  ],
+  "variants": [
+    "primary",
+    "secondary",
+    "destructive"
+  ],
+  "sizes": [
+    "compact",
+    "default",
+    "comfortable"
+  ],
+  "states": [
+    "default",
+    "hover",
+    "focus-visible",
+    "pressed",
+    "disabled",
+    "loading"
+  ],
+  "tokens": {
+    "inheritsAppearanceFrom": "button",
+    "radius": "radius.md",
+    "iconSize": {
+      "compact": 16,
+      "default": 20,
+      "comfortable": 20
+    },
+    "minHitTarget": {
+      "web": "control.hitTarget.minimum.web",
+      "ios": "control.hitTarget.minimum.ios",
+      "android": "control.hitTarget.minimum.android"
+    },
+    "focusBorder": "color.border.focus"
+  },
+  "behavior": {
+    "action": "Same behavior and state transitions as Button.",
+    "tooltip": "Optional explanatory tooltip is not a substitute for the accessible name.",
+    "loading": "Retain the button's hit area and accessible name while busy."
+  },
+  "accessibility": [
+    "Nonempty programmatic accessible name is mandatory even when a tooltip is shown.",
+    "Use a native button/control, not an unlabelled clickable icon.",
+    "Support keyboard activation and visible focus, including contextual contrast."
+  ],
+  "platforms": {
+    "web": [
+      "Use semantic HTML controls, keyboard focus-visible, and 24×24 CSS px minimum targets; prefer more space for touch.",
+      "Retain browser zoom and allow labels to wrap or controls to grow."
+    ],
+    "ios": [
+      "Respect 44pt minimum interactive hit area and Dynamic Type; prefer native Button/Control semantics.",
+      "Use native enabled/disabled and accessibility label/state APIs."
+    ],
+    "android": [
+      "Respect 48dp minimum interactive target and nonlinear font scaling; prefer native Compose/View control semantics.",
+      "Use native enabled/disabled and accessibility semantics."
+    ]
+  }
+}

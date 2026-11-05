@@ -1,0 +1,46 @@
+name: Validate Moshi component contracts
+
+on:
+  push:
+    paths:
+      - 'components/**'
+      - 'tokens/components/**'
+      - 'examples/components*'
+      - 'scripts/validate-components.mjs'
+      - 'scripts/build-component-reference.mjs'
+      - 'COMPONENTS.md'
+      - 'tokens/colors/**'
+      - 'tokens/typography/**'
+      - 'tokens/spacing/**'
+      - 'tokens/shape/**'
+      - '.github/workflows/validate-components.yml'
+  pull_request:
+    paths:
+      - 'components/**'
+      - 'tokens/components/**'
+      - 'examples/components*'
+      - 'scripts/validate-components.mjs'
+      - 'scripts/build-component-reference.mjs'
+      - 'COMPONENTS.md'
+      - 'tokens/colors/**'
+      - 'tokens/typography/**'
+      - 'tokens/spacing/**'
+      - 'tokens/shape/**'
+      - '.github/workflows/validate-components.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate component contracts and approved token references
+        run: node scripts/validate-components.mjs
+      - name: Verify browser reference remains generated from approved tokens
+        run: node scripts/build-component-reference.mjs --check

@@ -54,6 +54,16 @@ Moshi Shape, Surfaces & Elevation v0.1 preserves the six existing radii, adds th
 
 Validate with `node scripts/validate-shape.mjs`. Real web/mobile rendering requires integration tests.
 
+## Components v0.1
+
+The first six portable component contracts cover Button, Icon Button, Text Field, Checkbox, Card, and Dialog. They document anatomy, variants, states, existing token mappings, accessibility behavior and cross-platform requirements without imposing a UI framework.
+
+- [Component specification](COMPONENTS.md)
+- [Machine-readable component contracts](components/) · [Control sizing primitives](tokens/components/primitives.tokens.json)
+- [Accessible browser reference](examples/components.html)
+
+Validate with `node scripts/validate-components.mjs` and verify the generated browser stylesheet with `node scripts/build-component-reference.mjs --check`. Production web/iOS/Android adapters are future work.
+
 ## Status
 
 🚧 **Work in progress** — Moshi is in its early development stage.
