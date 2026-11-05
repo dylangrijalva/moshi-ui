@@ -34,6 +34,16 @@ Moshi Typography v0.1 provides **six semantic text styles** (`display`, `heading
 
 Validate with `node scripts/validate-typography.mjs`. The system uses platform-native mobile font scaling and keeps typography independent of semantic text colors.
 
+## Spacing & layout tokens
+
+Moshi Spacing & Layout v0.1 publishes the approved 11-step numeric spacing scale and focused page/grid layout semantics, preserving content-driven grids and responsive platform behavior.
+
+- [Complete spacing and layout specification](SPACING.md)
+- [Numeric spacing primitives](tokens/spacing/primitives.tokens.json)
+- Semantic aliases: [Web](tokens/spacing/semantic.web.tokens.json) · [iOS](tokens/spacing/semantic.ios.tokens.json) · [Android](tokens/spacing/semantic.android.tokens.json)
+
+Validate with `node scripts/validate-spacing.mjs`. Native safe areas, accessible text growth and actual grid reflow require integration tests.
+
 ## Status
 
 🚧 **Work in progress** — Moshi is in its early development stage.

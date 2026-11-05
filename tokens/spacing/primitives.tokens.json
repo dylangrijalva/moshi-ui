@@ -1,0 +1,59 @@
+{
+  "$description": "Moshi Spacing & Layout v0.1. Eleven approved logical numeric spacing steps, resolved as px (web), pt (iOS) or dp (Android).",
+  "$extensions": {
+    "moshi.version": "0.1",
+    "moshi.format": "internal-spacing-v0.1",
+    "moshi.units": {
+      "web": "px",
+      "ios": "pt",
+      "android": "dp"
+    },
+    "moshi.note": "Numeric logical distances; platform adapters append their layout unit. DTCG-inspired, not strict DTCG dimension tokens."
+  },
+  "space": {
+    "0": {
+      "$type": "number",
+      "$value": 0
+    },
+    "1": {
+      "$type": "number",
+      "$value": 4
+    },
+    "2": {
+      "$type": "number",
+      "$value": 8
+    },
+    "3": {
+      "$type": "number",
+      "$value": 12
+    },
+    "4": {
+      "$type": "number",
+      "$value": 16
+    },
+    "5": {
+      "$type": "number",
+      "$value": 20
+    },
+    "6": {
+      "$type": "number",
+      "$value": 24
+    },
+    "8": {
+      "$type": "number",
+      "$value": 32
+    },
+    "10": {
+      "$type": "number",
+      "$value": 40
+    },
+    "12": {
+      "$type": "number",
+      "$value": 48
+    },
+    "16": {
+      "$type": "number",
+      "$value": 64
+    }
+  }
+}

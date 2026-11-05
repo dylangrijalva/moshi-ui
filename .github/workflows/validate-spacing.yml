@@ -1,0 +1,31 @@
+name: Validate Moshi spacing and layout tokens
+
+on:
+  push:
+    paths:
+      - 'tokens/spacing/**'
+      - 'scripts/validate-spacing.mjs'
+      - 'SPACING.md'
+      - 'FOUNDATIONS.md'
+      - '.github/workflows/validate-spacing.yml'
+  pull_request:
+    paths:
+      - 'tokens/spacing/**'
+      - 'scripts/validate-spacing.mjs'
+      - 'SPACING.md'
+      - 'FOUNDATIONS.md'
+      - '.github/workflows/validate-spacing.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate spacing aliases and approved layout rules
+        run: node scripts/validate-spacing.mjs

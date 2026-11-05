@@ -139,6 +139,20 @@ Use a **4px base grid**. All recurring spacing must map to an approved token.
 - Dense data views may occupy available width; long-form reading content should use a comfortable line length (roughly 60–75 characters).
 - Design narrow layouts first, then expand where useful. Never require horizontal scrolling for routine page navigation or forms. Exception: intentionally scrollable data tables may scroll within their region.
 
+### Approved Spacing & Layout v0.1 semantics
+
+The complete specification is [SPACING.md](SPACING.md). The original scale above remains unchanged, represented in [numeric primitives](tokens/spacing/primitives.tokens.json). Platform semantic aliases are provided for [web](tokens/spacing/semantic.web.tokens.json), [iOS](tokens/spacing/semantic.ios.tokens.json), and [Android](tokens/spacing/semantic.android.tokens.json).
+
+- **Shared units:** numerical `space.*` values map to CSS px, iOS pt and Android dp; accessibility typography scaling is separate.
+- **Gutters:** `layout.page.gutter.narrow` (16), `.medium` (24), `.wide` (32). Web page-only thresholds: <640px, 640–1023px, >=1024px. Native chooses based on usable content space.
+- **Safe areas:** runtime insets belong to the platform; apply once at the correct container, then place page gutters inside.
+- **Sections:** `layout.page.sectionGap.compact` (32) for dense workspaces and `.comfortable` (48) for reading/informational pages, chosen by content density, not viewport width. `layout.section.headerGap` = 16.
+- **Grid:** content-defined minimum item widths, equal-width flexible tracks and equal-height cards **within each row** by default; incomplete rows preserve existing column widths. No fixed card heights, universal minimum item width or 12-column requirement. `layout.grid.gap.compact` (12) and `.comfortable` (24) apply on both axes by default.
+- **Reading:** `layout.content.reading.maxWidth` = 70ch on web, with typography-aware native approximate-character constraints; no universal page max-width.
+- **Minimal token vocabulary:** stacks use `space.2` (8) and `space.3` (12) commonly, without new aliases. Component padding is component-owned, not a global semantic token.
+
+Run `node scripts/validate-spacing.mjs` for static checks. Real responsive layout and native safe areas/text scaling still need app-level tests.
+
 ## 6. Shape, surfaces, and elevation
 
 Moshi is mostly flat. Use borders and changes in surface tone before adding shadows.
@@ -258,7 +272,7 @@ When implementing UI with Moshi:
 This is **Moshi v0.1**, intentionally small. It defines shared visual foundations, not a finished design library.
 
 **Next artifacts:**
-1. **Color and typography source tokens** — implemented and documented. Next: cross-platform consumption/export adapters and representative app validation.
+1. **Color, typography, and spacing/layout source tokens** — implemented and documented. Next: cross-platform consumption/export adapters and representative app validation.
 2. **COMPONENTS.md** — approved component anatomy, variants, interaction states, and usage.
 3. **AGENTS.md** — a short operational entry point telling agents where to read Moshi rules.
 4. **examples/** — one real screen used to validate and refine the system.

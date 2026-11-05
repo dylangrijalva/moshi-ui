@@ -1,0 +1,69 @@
+{
+  "$description": "Moshi Spacing & Layout v0.1 web: 8 spacing aliases and one reading-width role.",
+  "$extensions": {
+    "moshi.version": "0.1",
+    "moshi.platform": "web",
+    "moshi.spacingUnit": "px",
+    "moshi.pageGutterSelection": "viewport-only",
+    "moshi.safeArea": "Account for platform safe-area insets once at the container boundary and apply page gutters inside.",
+    "moshi.pageGutterBreakpointsPx": {
+      "mediumMin": 640,
+      "wideMin": 1024
+    }
+  },
+  "layout": {
+    "page": {
+      "gutter": {
+        "narrow": {
+          "$type": "number",
+          "$value": "{space.4}"
+        },
+        "medium": {
+          "$type": "number",
+          "$value": "{space.6}"
+        },
+        "wide": {
+          "$type": "number",
+          "$value": "{space.8}"
+        }
+      },
+      "sectionGap": {
+        "compact": {
+          "$type": "number",
+          "$value": "{space.8}"
+        },
+        "comfortable": {
+          "$type": "number",
+          "$value": "{space.12}"
+        }
+      }
+    },
+    "section": {
+      "headerGap": {
+        "$type": "number",
+        "$value": "{space.4}"
+      }
+    },
+    "grid": {
+      "gap": {
+        "compact": {
+          "$type": "number",
+          "$value": "{space.3}"
+        },
+        "comfortable": {
+          "$type": "number",
+          "$value": "{space.6}"
+        }
+      }
+    },
+    "content": {
+      "reading": {
+        "maxWidth": {
+          "$type": "dimension",
+          "$value": "70ch",
+          "$description": "Typography-relative maximum reading column; shrink within available space."
+        }
+      }
+    }
+  }
+}

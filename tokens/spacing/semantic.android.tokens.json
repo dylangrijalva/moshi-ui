@@ -1,0 +1,69 @@
+{
+  "$description": "Moshi Spacing & Layout v0.1 android: 8 spacing aliases and one reading-width role.",
+  "$extensions": {
+    "moshi.version": "0.1",
+    "moshi.platform": "android",
+    "moshi.spacingUnit": "dp",
+    "moshi.pageGutterSelection": "usable-content-space",
+    "moshi.safeArea": "Account for platform safe-area insets once at the container boundary and apply page gutters inside."
+  },
+  "layout": {
+    "page": {
+      "gutter": {
+        "narrow": {
+          "$type": "number",
+          "$value": "{space.4}"
+        },
+        "medium": {
+          "$type": "number",
+          "$value": "{space.6}"
+        },
+        "wide": {
+          "$type": "number",
+          "$value": "{space.8}"
+        }
+      },
+      "sectionGap": {
+        "compact": {
+          "$type": "number",
+          "$value": "{space.8}"
+        },
+        "comfortable": {
+          "$type": "number",
+          "$value": "{space.12}"
+        }
+      }
+    },
+    "section": {
+      "headerGap": {
+        "$type": "number",
+        "$value": "{space.4}"
+      }
+    },
+    "grid": {
+      "gap": {
+        "compact": {
+          "$type": "number",
+          "$value": "{space.3}"
+        },
+        "comfortable": {
+          "$type": "number",
+          "$value": "{space.6}"
+        }
+      }
+    },
+    "content": {
+      "reading": {
+        "maxWidth": {
+          "$type": "number",
+          "$value": 70,
+          "$extensions": {
+            "moshi.measure": "approximate-characters",
+            "moshi.referenceStyle": "typography.body",
+            "moshi.resolution": "Determine typography-aware maximum from rendered accessibility-scaled font, not as 70pt or 70dp; allow narrower content."
+          }
+        }
+      }
+    }
+  }
+}
