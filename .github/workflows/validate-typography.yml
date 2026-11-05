@@ -1,0 +1,27 @@
+name: Validate Moshi typography tokens
+
+on:
+  push:
+    paths:
+      - 'tokens/typography/**'
+      - 'scripts/validate-typography.mjs'
+      - '.github/workflows/validate-typography.yml'
+  pull_request:
+    paths:
+      - 'tokens/typography/**'
+      - 'scripts/validate-typography.mjs'
+      - '.github/workflows/validate-typography.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate typography role mappings and primitive aliases
+        run: node scripts/validate-typography.mjs
