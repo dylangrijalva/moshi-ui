@@ -24,6 +24,16 @@ Moshi v0.1 defines **38 semantic color roles** organized under `color.background
 
 Validate with `node scripts/validate-colors.mjs`.
 
+## Typography tokens
+
+Moshi Typography v0.1 provides **six semantic text styles** (`display`, `heading`, `subheading`, `body`, `small`, `caption`) with approved platform-specific baseline metrics, weights, and letter spacing.
+
+- [Typography specification, accessibility rules and token architecture](TYPOGRAPHY.md)
+- [Typography primitives](tokens/typography/primitives.tokens.json)
+- Semantic mappings: [Web](tokens/typography/semantic.web.tokens.json) · [iOS](tokens/typography/semantic.ios.tokens.json) · [Android](tokens/typography/semantic.android.tokens.json)
+
+Validate with `node scripts/validate-typography.mjs`. The system uses platform-native mobile font scaling and keeps typography independent of semantic text colors.
+
 ## Status
 
 🚧 **Work in progress** — Moshi is in its early development stage.
