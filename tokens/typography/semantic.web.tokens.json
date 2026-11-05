@@ -1,0 +1,65 @@
+{
+  "$description": "Moshi v0.1 web semantic typography styles. Six approved semantic roles; no colors or component-specific typography variants.",
+  "typography": {
+    "display": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font.family.web.sans}",
+        "fontSize": "{font.size.web.30}",
+        "fontWeight": "{font.weight.semibold}",
+        "lineHeight": "{font.lineHeight.web.38}",
+        "letterSpacing": "{font.letterSpacing.display}"
+      }
+    },
+    "heading": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font.family.web.sans}",
+        "fontSize": "{font.size.web.24}",
+        "fontWeight": "{font.weight.semibold}",
+        "lineHeight": "{font.lineHeight.web.32}",
+        "letterSpacing": "{font.letterSpacing.heading}"
+      }
+    },
+    "subheading": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font.family.web.sans}",
+        "fontSize": "{font.size.web.18}",
+        "fontWeight": "{font.weight.medium}",
+        "lineHeight": "{font.lineHeight.web.26}",
+        "letterSpacing": "{font.letterSpacing.normal}"
+      }
+    },
+    "body": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font.family.web.sans}",
+        "fontSize": "{font.size.web.16}",
+        "fontWeight": "{font.weight.regular}",
+        "lineHeight": "{font.lineHeight.web.24}",
+        "letterSpacing": "{font.letterSpacing.normal}"
+      }
+    },
+    "small": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font.family.web.sans}",
+        "fontSize": "{font.size.web.14}",
+        "fontWeight": "{font.weight.regular}",
+        "lineHeight": "{font.lineHeight.web.20}",
+        "letterSpacing": "{font.letterSpacing.normal}"
+      }
+    },
+    "caption": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font.family.web.sans}",
+        "fontSize": "{font.size.web.12}",
+        "fontWeight": "{font.weight.regular}",
+        "lineHeight": "{font.lineHeight.web.16}",
+        "letterSpacing": "{font.letterSpacing.normal}"
+      }
+    }
+  }
+}
