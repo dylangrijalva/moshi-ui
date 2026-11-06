@@ -1,0 +1,42 @@
+name: Validate Moshi DESIGN.md projection
+
+on:
+  push:
+    paths:
+      - 'DESIGN.md'
+      - 'AGENTS.md'
+      - 'scripts/build-design-md.mjs'
+      - 'tokens/colors/**'
+      - 'tokens/typography/**'
+      - 'tokens/spacing/**'
+      - 'tokens/shape/**'
+      - 'tokens/components/**'
+      - '.github/workflows/validate-design-md.yml'
+  pull_request:
+    paths:
+      - 'DESIGN.md'
+      - 'AGENTS.md'
+      - 'scripts/build-design-md.mjs'
+      - 'tokens/colors/**'
+      - 'tokens/typography/**'
+      - 'tokens/spacing/**'
+      - 'tokens/shape/**'
+      - 'tokens/components/**'
+      - '.github/workflows/validate-design-md.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check DESIGN.md against canonical Moshi tokens
+        run: node scripts/build-design-md.mjs --check
+      - name: Lint with Google Labs DESIGN.md alpha CLI
+        run: npx --yes @google/design.md@0.1.0 lint DESIGN.md

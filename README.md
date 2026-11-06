@@ -64,6 +64,14 @@ The first six portable component contracts cover Button, Icon Button, Text Field
 
 Validate with `node scripts/validate-components.mjs` and verify the generated browser stylesheet with `node scripts/build-component-reference.mjs --check`. Production web/iOS/Android adapters are future work.
 
+## Agent-ready DESIGN.md
+
+[DESIGN.md](DESIGN.md) is the **Google Labs DESIGN.md alpha-compatible** front-door contract for agents: approved light/dark semantic colors, six web typography roles, spacing and radii, component-style projections and behavioral rules. It is a **generated projection** of the canonical Moshi source token JSON and specification files, not a competing source of design decisions.
+
+- [Agent instructions](AGENTS.md) provide the recommended reading order.
+- Refresh the file after approved token changes with `node scripts/build-design-md.mjs`; check for drift with `node scripts/build-design-md.mjs --check`.
+- To lint the format with the external official CLI, use `npx @google/design.md lint DESIGN.md`. The alpha parser only supports web-compatible units in YAML; native typography, safe areas, shadow geometry and complete interactions remain in the original specifications.
+
 ## Status
 
 🚧 **Work in progress** — Moshi is in its early development stage.
