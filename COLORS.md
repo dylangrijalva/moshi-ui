@@ -48,7 +48,7 @@ Every table below lists the full `color.*` semantic path, resolved HEX for light
 | `color.background.surface` | `#FFFFFF` | `#262A34` | `neutral.0` | `moshi.neutral.dark.3` |
 | `color.background.elevated` | `#FFFFFF` | `#32353F` | `neutral.0` | `moshi.neutral.dark.4` |
 | `color.background.selected` | `#F7F7F7` | `#32353F` | `neutral.50` | `moshi.neutral.dark.4` |
-| `color.background.disabled` | `#F0F0F0` | `#1E222C` | `neutral.100` | `moshi.neutral.dark.2` |
+| `color.background.disabled` | `#E5E5E5` | `#1E222C` | `neutral.200` | `moshi.neutral.dark.2` |
 | `color.background.inverse` | `#252525` | `#FFFFFF` | `neutral.900` | `neutral.0` |
 | `color.background.overlay` | `#00000066` | `#00000099` | `moshi.alpha.black.40` | `moshi.alpha.black.60` |
 | `color.background.brand` | `#FF4C00` | `#FF4C00` | `orange.50` | `orange.50` |

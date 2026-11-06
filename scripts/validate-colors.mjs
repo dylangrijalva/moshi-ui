@@ -25,7 +25,7 @@ const expected={
     "#32353F"
   ],
   "background.disabled": [
-    "#F0F0F0",
+    "#E5E5E5",
     "#1E222C"
   ],
   "background.inverse": [
@@ -215,6 +215,8 @@ for(const [path,hex] of Object.entries({
 for(const [path,hex] of Object.entries({
   'grass.dark.3':'#1B2A1E','grass.dark.6':'#2D5736','ruby.dark.3':'#3A141E'
 })) assert.equal(get(radix.color.radix,path)?.$value,hex,'Pinned upstream value changed: '+path);
+assert.equal(read('semantic.light.tokens.json').color.background.disabled.$value,
+  '{color.neutral.200}','Approved light disabled-background alias drift');
 const resolved={};
 for(const mode of ['light','dark']){
   const rows=walk(read('semantic.'+mode+'.tokens.json').color);

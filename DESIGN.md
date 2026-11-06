@@ -7,7 +7,7 @@ colors:
   light-background-surface: "#FFFFFF"
   light-background-elevated: "#FFFFFF"
   light-background-selected: "#F7F7F7"
-  light-background-disabled: "#F0F0F0"
+  light-background-disabled: "#E5E5E5"
   light-background-inverse: "#252525"
   light-background-overlay: "#00000066"
   light-background-brand: "#FF4C00"
