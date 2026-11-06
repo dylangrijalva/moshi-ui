@@ -22,6 +22,7 @@ colors:
   light-background-status-info: "#E6F4FE"
   light-foreground-primary: "#252525"
   light-foreground-secondary: "#666666"
+  light-foreground-tertiary: "#6B6B6B"
   light-foreground-disabled: "#7A7A7A"
   light-foreground-inverse: "#FFFFFF"
   light-foreground-link: "#2B4FB9"
@@ -60,6 +61,7 @@ colors:
   dark-background-status-info: "#0D2847"
   dark-foreground-primary: "#FFFFFF"
   dark-foreground-secondary: "#FFFFFFCC"
+  dark-foreground-tertiary: "#FFFFFF99"
   dark-foreground-disabled: "#FFFFFF80"
   dark-foreground-inverse: "#252525"
   dark-foreground-link: "#9DA9CA"
@@ -155,7 +157,7 @@ rounded:
 
 ## Colors
 
-The YAML `colors` map contains **all 38 approved semantic roles, resolved for both light and dark themes** (76 values). Names are flattened for this specification: `light-background-canvas` corresponds to source `color.background.canvas` in the light theme, `dark-foreground-primary` to `color.foreground.primary` in dark. They are **not a separate palette**. The authoritative alias provenance and contrast guidance are in [COLORS.md](COLORS.md).
+The YAML `colors` map contains **all 39 approved semantic roles, resolved for both light and dark themes** (78 values). Names are flattened for this specification: `light-background-canvas` corresponds to source `color.background.canvas` in the light theme, `dark-foreground-primary` to `color.foreground.primary` in dark. They are **not a separate palette**. The authoritative alias provenance and contrast guidance are in [COLORS.md](COLORS.md).
 
 The identity accent is **brand orange** (`light-background-brand` / `dark-background-brand`, #FF4C00). Primary actions are **blue** (`light-background-action-primary-default` / `dark-background-action-primary-default`, #2B4FB9); never confuse brand orange with the default call to action. Use approved surface tones and semantic foreground/border roles, rather than hardcoded hex colors.
 

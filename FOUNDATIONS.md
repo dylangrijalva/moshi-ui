@@ -41,7 +41,7 @@ Avoid gratuitous gradients, excessive shadows, glassmorphism, oversized cards, i
 
 ## 3. Color foundations
 
-Moshi v0.1 publishes **38 property-driven semantic colors** in three parents: `color.background` (17), `color.foreground` (13), and `color.border` (8). Each token has approved **light and dark sRGB HEX** values shared by web, iOS, and Android.
+Moshi v0.1 publishes **39 property-driven semantic colors** in three parents: `color.background` (17), `color.foreground` (14), and `color.border` (8). Each token has approved **light and dark sRGB HEX** values shared by web, iOS, and Android.
 
 The canonical alias files are [light](tokens/colors/semantic.light.tokens.json) and [dark](tokens/colors/semantic.dark.tokens.json). Resolve exactly one theme alongside the primitive files:
 
@@ -49,11 +49,12 @@ The canonical alias files are [light](tokens/colors/semantic.light.tokens.json) 
 - [Pinned Radix Colors 3.0.0 sRGB primitives](tokens/colors/radix.tokens.json), copied locally.
 - [Moshi primitive extensions](tokens/colors/extended.tokens.json), including three documented, approved deviations from the pinned Radix dark shades.
 
-See [COLORS.md](COLORS.md) for **all 38 full token names**, both HEX values, primitive alias provenance, and accessibility behavior. Do not assume these values match the original Figma Web/Native semantic assignments; Moshi's web/mobile semantic values are deliberately unified.
+See [COLORS.md](COLORS.md) for **all 39 full token names**, both HEX values, primitive alias provenance, and accessibility behavior. Do not assume these values match the original Figma Web/Native semantic assignments; Moshi's web/mobile semantic values are deliberately unified.
 
 ### Color rules
 
 - **Always use semantic aliases** in products and components. Primitive HEX values are implementation details.
+- Use `color.foreground.tertiary` for optional metadata. Use `color.foreground.secondary` for supporting text people need to complete a task.
 - Preserve neutral surfaces and readable foregrounds. Moshi orange `#FF4C00` is a brand accent; blue `#2B4FB9` is the primary action fill, both consistent across themes.
 - Secondary outlined actions reuse the blue interactive border; default background is transparent, and the hover background is blue-tinted.
 - Pressed states reuse their hover-color tokens. Disabled borders reuse `border.default`; placeholder text reuses `foreground.secondary`.

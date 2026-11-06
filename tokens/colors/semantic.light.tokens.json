@@ -1,5 +1,5 @@
 {
-  "$description": "Moshi v0.1 light semantic color aliases; approved 38 property-driven roles, shared by web and mobile.",
+  "$description": "Moshi v0.1 light semantic color aliases; approved 39 property-driven roles, shared by web and mobile.",
   "color": {
     "$type": "color",
     "background": {
@@ -71,6 +71,9 @@
       },
       "secondary": {
         "$value": "{color.neutral.600}"
+      },
+      "tertiary": {
+        "$value": "{color.moshi.neutral.light.2}"
       },
       "disabled": {
         "$value": "{color.neutral.500}"

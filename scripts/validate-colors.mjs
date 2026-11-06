@@ -84,6 +84,10 @@ const expected={
     "#666666",
     "#FFFFFFCC"
   ],
+  "foreground.tertiary": [
+    "#6B6B6B",
+    "#FFFFFF99"
+  ],
   "foreground.disabled": [
     "#7A7A7A",
     "#FFFFFF80"
@@ -214,7 +218,7 @@ for(const [path,hex] of Object.entries({
 const resolved={};
 for(const mode of ['light','dark']){
   const rows=walk(read('semantic.'+mode+'.tokens.json').color);
-  assert.equal(Object.keys(rows).length,38,'Wrong role count');
+  assert.equal(Object.keys(rows).length,39,'Wrong role count');
   assert.deepEqual(Object.keys(rows).sort(),Object.keys(expected).sort(),'Wrong semantic paths');
   const result={};
   for(const [path,ref] of Object.entries(rows)){
@@ -251,11 +255,12 @@ for(const mode of ['light','dark']){
   for(const action of ['primary','destructive'])for(const state of ['default','hover'])check(mode,'foreground.onAction.'+action,'background.action.'+action+'.'+state);
   check(mode,'foreground.action.secondary','background.action.secondary.hover');
   for(const f of ['primary','secondary','link'])for(const b of ['canvas','surface'])check(mode,'foreground.'+f,'background.'+b);
+  for(const b of ['canvas','surface','elevated','selected'])check(mode,'foreground.tertiary','background.'+b);
   check(mode,'foreground.action.secondary','background.surface');
 }
 const focus=ratio(resolved.light['border.focus'],resolved.light['background.canvas']);
 assert.ok(focus<3,'Review contextual contrast-band policy because focus contrast has changed');
-console.log('PASS: 38 approved semantic roles × 2 themes; '+Object.keys(radixExpected).length+' pinned Radix primitives; '+pairs+' AA contrast pairs.');
+console.log('PASS: 39 approved semantic roles × 2 themes; '+Object.keys(radixExpected).length+' pinned Radix primitives; '+pairs+' AA contrast pairs.');
 console.log('3 Moshi-approved dark HEX overrides are explicitly isolated from upstream Radix.');
 console.log('Focus on light canvas: '+focus.toFixed(2)+':1 — contextual neutral band required.');
 

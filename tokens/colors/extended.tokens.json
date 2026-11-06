@@ -7,6 +7,9 @@
         "light": {
           "1": {
             "$value": "#F0F0F2"
+          },
+          "2": {
+            "$value": "#6B6B6B"
           }
         },
         "dark": {
@@ -58,6 +61,9 @@
           },
           "50": {
             "$value": "#FFFFFF80"
+          },
+          "60": {
+            "$value": "#FFFFFF99"
           },
           "80": {
             "$value": "#FFFFFFCC"

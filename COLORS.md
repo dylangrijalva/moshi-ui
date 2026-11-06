@@ -10,9 +10,9 @@ All colors are **sRGB encoded as HEX** (`#RRGGBB` or `#RRGGBBAA` for alpha). Web
 | --- | --- | --- |
 | Original primitives | [`primitives.tokens.json`](tokens/colors/primitives.tokens.json) | The 45 unchanged Figma-derived Moshi primitives (eight families) |
 | Radix primitives | [`radix.tokens.json`](tokens/colors/radix.tokens.json) | 27 selected, exact Radix Colors **3.0.0** sRGB entries, local snapshot |
-| Moshi extensions | [`extended.tokens.json`](tokens/colors/extended.tokens.json) | 18 additional color values, including three approved Radix deviations |
-| Light semantics | [`semantic.light.tokens.json`](tokens/colors/semantic.light.tokens.json) | 38 aliases under `color.background`, `color.foreground`, `color.border` |
-| Dark semantics | [`semantic.dark.tokens.json`](tokens/colors/semantic.dark.tokens.json) | The same 38 paths, with dark-theme aliases |
+| Moshi extensions | [`extended.tokens.json`](tokens/colors/extended.tokens.json) | 20 additional color values, including three approved Radix deviations |
+| Light semantics | [`semantic.light.tokens.json`](tokens/colors/semantic.light.tokens.json) | 39 aliases under `color.background`, `color.foreground`, `color.border` |
+| Dark semantics | [`semantic.dark.tokens.json`](tokens/colors/semantic.dark.tokens.json) | The same 39 paths, with dark-theme aliases |
 
 The semantic token names are property-first: `background` colors sit behind content, `foreground` colors apply to text/icons, and `border` colors define separation, interactive boundaries, and focus. Component tokens are deferred. Applications should use semantic aliases instead of choosing primitive HEX values directly.
 
@@ -68,6 +68,7 @@ Every table below lists the full `color.*` semantic path, resolved HEX for light
 | --- | --- | --- | --- | --- |
 | `color.foreground.primary` | `#252525` | `#FFFFFF` | `neutral.900` | `neutral.0` |
 | `color.foreground.secondary` | `#666666` | `#FFFFFFCC` | `neutral.600` | `moshi.alpha.white.80` |
+| `color.foreground.tertiary` | `#6B6B6B` | `#FFFFFF99` | `moshi.neutral.light.2` | `moshi.alpha.white.60` |
 | `color.foreground.disabled` | `#7A7A7A` | `#FFFFFF80` | `neutral.500` | `moshi.alpha.white.50` |
 | `color.foreground.inverse` | `#FFFFFF` | `#252525` | `neutral.0` | `neutral.900` |
 | `color.foreground.link` | `#2B4FB9` | `#9DA9CA` | `blue.75` | `moshi.blue.dark.2` |
@@ -101,6 +102,7 @@ Every table below lists the full `color.*` semantic path, resolved HEX for light
 - **Destructive vs error**: separate semantic roles share portions of the Ruby palette. Destructive white-on-fill combinations were explicitly chosen with AA text contrast in mind.
 - **Status**: each status exposes exactly `background`, `foreground`, and `border`. Foreground is shared by text and icons. Tinted backgrounds correspond to Radix step 3, borders to step 6, and foreground to step 11 or 12 according to AA contrast. The three preserved deviations above are exceptions to exact upstream HEX.
 - **Disabled**: use `background.disabled`, `foreground.disabled`, and the existing `border.default`. Disable interactions programmatically as well as visually.
+- Use `color.foreground.tertiary` for optional metadata, such as a last-updated timestamp. It meets 4.5:1 text contrast on canvas, surface, elevated, and selected backgrounds in both themes. Use `color.foreground.secondary` for supporting text people need to complete a task.
 - **Placeholders**: reuse `foreground.secondary`; placeholders are not labels.
 - **Selection**: neutral `background.selected` is subtle; convey selected state with additional meaningful indicators when needed.
 - **Focus**: use `border.focus` blue `#558EDD` in both themes. On insufficient-contrast surroundings, add a **contextual neutral band**, without adding a new semantic token.
@@ -128,7 +130,7 @@ Run the repository's token checks:
 node scripts/validate-colors.mjs
 ```
 
-The validator checks all 38 semantic role paths, both themes, primitive resolution, approved HEX snapshots, the pinned Radix subset (including the three deviations), and key WCAG AA color pairs.
+The validator checks all 39 semantic role paths, both themes, primitive resolution, approved HEX snapshots, the pinned Radix subset (including the three deviations), and key WCAG AA color pairs.
 
 ### Scope
 
