@@ -185,7 +185,7 @@ Run `node scripts/validate-shape.mjs` for static checks. App-level web/native sh
 
 ## 7. Controls, states, and density
 
-The first six framework-neutral component contracts are documented in [COMPONENTS.md](COMPONENTS.md), with machine-readable sources in [components/](components/) and approved control sizing in [tokens/components/primitives.tokens.json](tokens/components/primitives.tokens.json). These shared rules remain authoritative:
+**Individual components are not yet designed or approved.** The following are general control and accessibility guidelines, not component contracts:
 
 - Desktop control heights: **32px compact**, **36px default**, **40px comfortable**. These are visual sizing presets, not universal target-size exemptions.
 - Touch interfaces need larger hit targets: aim for at least **44pt on iOS** or **48dp on Android**, using transparent hit areas if necessary.
@@ -195,8 +195,6 @@ The first six framework-neutral component contracts are documented in [COMPONENT
 - Destructive actions must be distinguishable and should confirm when consequences are difficult to reverse.
 - Forms need persistent labels, clear help text when needed, and actionable inline errors. Placeholders never replace labels.
 - Loading states must avoid unexpected layout shifts. Empty and error states should explain the next available action.
-
-Run `node scripts/validate-components.mjs` to validate the six v0.1 contracts and approved token references. The [browser reference](examples/components.html) is demonstrative, not a production cross-platform component package.
 
 ## 8. Accessibility baseline
 
@@ -287,8 +285,8 @@ This is **Moshi v0.1**, intentionally small. It defines shared visual foundation
 
 **Next artifacts:**
 1. **Color, typography, spacing/layout, and shape/elevation source tokens** — implemented and documented. Next: cross-platform consumption/export adapters and representative app validation.
-2. **COMPONENTS.md** — approved component anatomy, variants, interaction states, and usage.
-3. **AGENTS.md** — a short operational entry point telling agents where to read Moshi rules.
+2. **Components (planned)** — discuss and approve each component's visual design, anatomy, states, accessibility and implementation before writing a specification.
+3. **AGENTS.md** — implemented agent entry point for the current foundations.
 4. **examples/** — one real screen used to validate and refine the system.
 
 Do not add tooling, packages, or abstraction layers until a real product needs them. Changes to a foundation should update this document first, then the corresponding tokens, components, and examples.

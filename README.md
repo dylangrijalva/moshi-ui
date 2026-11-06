@@ -7,7 +7,7 @@ It serves as a single source of truth for design decisions, helping developers a
 ## Core Pillars
 
 - **Foundations** — Design principles, colors, typography, spacing, and design tokens.
-- **Components** — Reusable UI building blocks with consistent styles and behaviors.
+- **Components (planned)** — Reusable UI building blocks to be designed and approved.
 - **Agent Guidelines** — Clear instructions for AI agents to build interfaces following Moshi's standards.
 
 ## Philosophy
@@ -54,19 +54,13 @@ Moshi Shape, Surfaces & Elevation v0.1 preserves the six existing radii, adds th
 
 Validate with `node scripts/validate-shape.mjs`. Real web/mobile rendering requires integration tests.
 
-## Components v0.1
+## Components (not yet designed)
 
-The first six portable component contracts cover Button, Icon Button, Text Field, Checkbox, Card, and Dialog. They document anatomy, variants, states, existing token mappings, accessibility behavior and cross-platform requirements without imposing a UI framework.
-
-- [Component specification](COMPONENTS.md)
-- [Machine-readable component contracts](components/) · [Control sizing primitives](tokens/components/primitives.tokens.json)
-- [Accessible browser reference](examples/components.html)
-
-Validate with `node scripts/validate-components.mjs` and verify the generated browser stylesheet with `node scripts/build-component-reference.mjs --check`. Production web/iOS/Android adapters are future work.
+Component anatomy, variants, visual styling and implementation are **pending discussion and approval**. No component contracts or demo gallery are currently published. The existing foundations alone do not establish the design of individual components.
 
 ## Agent-ready DESIGN.md
 
-[DESIGN.md](DESIGN.md) is the **Google Labs DESIGN.md alpha-compatible** front-door contract for agents: approved light/dark semantic colors, six web typography roles, spacing and radii, component-style projections and behavioral rules. It is a **generated projection** of the canonical Moshi source token JSON and specification files, not a competing source of design decisions.
+[DESIGN.md](DESIGN.md) is the **Google Labs DESIGN.md alpha-compatible** front-door contract for agents: approved light/dark semantic colors, six web typography roles, spacing and radii, plus general foundational and accessibility guidance. It is a **generated projection** of the canonical Moshi source token JSON and specification files, not a competing source of design decisions.
 
 - [Agent instructions](AGENTS.md) provide the recommended reading order.
 - Refresh the file after approved token changes with `node scripts/build-design-md.mjs`; check for drift with `node scripts/build-design-md.mjs --check`.

@@ -143,159 +143,6 @@ rounded:
   lg: "12px"
   xl: "16px"
   full: "9999px"
-components:
-  button-primary-light:
-    backgroundColor: "{colors.light-background-action-primary-default}"
-    textColor: "{colors.light-foreground-on-action-primary}"
-    typography: "{typography.small}"
-    rounded: "{rounded.md}"
-    padding: "{spacing.space-3}"
-    height: "36px"
-  button-primary-hover-light:
-    backgroundColor: "{colors.light-background-action-primary-hover}"
-    textColor: "{colors.light-foreground-on-action-primary}"
-    typography: "{typography.small}"
-    rounded: "{rounded.md}"
-    padding: "{spacing.space-3}"
-    height: "36px"
-  button-destructive-light:
-    backgroundColor: "{colors.light-background-action-destructive-default}"
-    textColor: "{colors.light-foreground-on-action-destructive}"
-    typography: "{typography.small}"
-    rounded: "{rounded.md}"
-    padding: "{spacing.space-3}"
-    height: "36px"
-  button-destructive-hover-light:
-    backgroundColor: "{colors.light-background-action-destructive-hover}"
-    textColor: "{colors.light-foreground-on-action-destructive}"
-    typography: "{typography.small}"
-    rounded: "{rounded.md}"
-    padding: "{spacing.space-3}"
-    height: "36px"
-  button-secondary-light:
-    textColor: "{colors.light-foreground-action-secondary}"
-    typography: "{typography.small}"
-    rounded: "{rounded.md}"
-    padding: "{spacing.space-3}"
-    height: "36px"
-  button-secondary-hover-light:
-    backgroundColor: "{colors.light-background-action-secondary-hover}"
-    textColor: "{colors.light-foreground-action-secondary}"
-    typography: "{typography.small}"
-    rounded: "{rounded.md}"
-    padding: "{spacing.space-3}"
-    height: "36px"
-  icon-button-secondary-light:
-    textColor: "{colors.light-foreground-action-secondary}"
-    rounded: "{rounded.md}"
-    size: "36px"
-  text-field-light:
-    backgroundColor: "{colors.light-background-surface}"
-    textColor: "{colors.light-foreground-primary}"
-    typography: "{typography.body}"
-    rounded: "{rounded.md}"
-    padding: "{spacing.space-3}"
-    height: "36px"
-  text-field-invalid-light:
-    backgroundColor: "{colors.light-background-surface}"
-    textColor: "{colors.light-foreground-primary}"
-    typography: "{typography.body}"
-    rounded: "{rounded.md}"
-    padding: "{spacing.space-3}"
-    height: "36px"
-  checkbox-checked-light:
-    backgroundColor: "{colors.light-background-action-primary-default}"
-    textColor: "{colors.light-foreground-on-action-primary}"
-    rounded: "{rounded.sm}"
-    size: "16px"
-  card-light:
-    backgroundColor: "{colors.light-background-surface}"
-    textColor: "{colors.light-foreground-primary}"
-    typography: "{typography.body}"
-    rounded: "{rounded.lg}"
-    padding: "{spacing.space-4}"
-  dialog-light:
-    backgroundColor: "{colors.light-background-elevated}"
-    textColor: "{colors.light-foreground-primary}"
-    typography: "{typography.body}"
-    rounded: "{rounded.lg}"
-    padding: "{spacing.space-6}"
-  button-primary-dark:
-    backgroundColor: "{colors.dark-background-action-primary-default}"
-    textColor: "{colors.dark-foreground-on-action-primary}"
-    typography: "{typography.small}"
-    rounded: "{rounded.md}"
-    padding: "{spacing.space-3}"
-    height: "36px"
-  button-primary-hover-dark:
-    backgroundColor: "{colors.dark-background-action-primary-hover}"
-    textColor: "{colors.dark-foreground-on-action-primary}"
-    typography: "{typography.small}"
-    rounded: "{rounded.md}"
-    padding: "{spacing.space-3}"
-    height: "36px"
-  button-destructive-dark:
-    backgroundColor: "{colors.dark-background-action-destructive-default}"
-    textColor: "{colors.dark-foreground-on-action-destructive}"
-    typography: "{typography.small}"
-    rounded: "{rounded.md}"
-    padding: "{spacing.space-3}"
-    height: "36px"
-  button-destructive-hover-dark:
-    backgroundColor: "{colors.dark-background-action-destructive-hover}"
-    textColor: "{colors.dark-foreground-on-action-destructive}"
-    typography: "{typography.small}"
-    rounded: "{rounded.md}"
-    padding: "{spacing.space-3}"
-    height: "36px"
-  button-secondary-dark:
-    textColor: "{colors.dark-foreground-action-secondary}"
-    typography: "{typography.small}"
-    rounded: "{rounded.md}"
-    padding: "{spacing.space-3}"
-    height: "36px"
-  button-secondary-hover-dark:
-    backgroundColor: "{colors.dark-background-action-secondary-hover}"
-    textColor: "{colors.dark-foreground-action-secondary}"
-    typography: "{typography.small}"
-    rounded: "{rounded.md}"
-    padding: "{spacing.space-3}"
-    height: "36px"
-  icon-button-secondary-dark:
-    textColor: "{colors.dark-foreground-action-secondary}"
-    rounded: "{rounded.md}"
-    size: "36px"
-  text-field-dark:
-    backgroundColor: "{colors.dark-background-surface}"
-    textColor: "{colors.dark-foreground-primary}"
-    typography: "{typography.body}"
-    rounded: "{rounded.md}"
-    padding: "{spacing.space-3}"
-    height: "36px"
-  text-field-invalid-dark:
-    backgroundColor: "{colors.dark-background-surface}"
-    textColor: "{colors.dark-foreground-primary}"
-    typography: "{typography.body}"
-    rounded: "{rounded.md}"
-    padding: "{spacing.space-3}"
-    height: "36px"
-  checkbox-checked-dark:
-    backgroundColor: "{colors.dark-background-action-primary-default}"
-    textColor: "{colors.dark-foreground-on-action-primary}"
-    rounded: "{rounded.sm}"
-    size: "16px"
-  card-dark:
-    backgroundColor: "{colors.dark-background-surface}"
-    textColor: "{colors.dark-foreground-primary}"
-    typography: "{typography.body}"
-    rounded: "{rounded.lg}"
-    padding: "{spacing.space-4}"
-  dialog-dark:
-    backgroundColor: "{colors.dark-background-elevated}"
-    textColor: "{colors.dark-foreground-primary}"
-    typography: "{typography.body}"
-    rounded: "{rounded.lg}"
-    padding: "{spacing.space-6}"
 ---
 
 # Moshi UI — DESIGN.md
@@ -304,7 +151,7 @@ components:
 
 **Moshi UI** is an open-source, agent-first design system for consistent web, iOS and Android applications. Its visual direction is **technical, precise, calm, efficient, compact without becoming cramped**. Prioritize clarity, information hierarchy, accessible controls, quiet neutral surfaces, and content-responsive layouts. Inspiration from Linear is conceptual, not permission to replicate its designs or brand assets.
 
-**Authority:** This file is a **generated, web-compatible DESIGN.md projection**, not the primary source of approved design decisions. Canonical sources are [FOUNDATIONS.md](FOUNDATIONS.md), [COLORS.md](COLORS.md), [TYPOGRAPHY.md](TYPOGRAPHY.md), [SPACING.md](SPACING.md), [SHAPE.md](SHAPE.md), [COMPONENTS.md](COMPONENTS.md), and their `tokens/` and `components/` JSON files. When a detail is absent from this alpha format, follow those sources; do not improvise new tokens. To update this file after an approved foundation change, run `node scripts/build-design-md.mjs`.
+**Authority:** This file is a **generated, web-compatible DESIGN.md projection**, not the primary source of approved design decisions. Canonical sources are [FOUNDATIONS.md](FOUNDATIONS.md), [COLORS.md](COLORS.md), [TYPOGRAPHY.md](TYPOGRAPHY.md), [SPACING.md](SPACING.md), [SHAPE.md](SHAPE.md), and their `tokens/` JSON files. When a detail is absent from this alpha format, follow those sources; do not improvise new tokens. **Individual components have not yet been designed or approved.** Do not infer component visuals, variants, or implementations from foundation tokens. To update this file after an approved foundation change, run `node scripts/build-design-md.mjs`.
 
 ## Colors
 
@@ -312,7 +159,7 @@ The YAML `colors` map contains **all 38 approved semantic roles, resolved for bo
 
 The identity accent is **brand orange** (`light-background-brand` / `dark-background-brand`, #FF4C00). Primary actions are **blue** (`light-background-action-primary-default` / `dark-background-action-primary-default`, #2B4FB9); never confuse brand orange with the default call to action. Use approved surface tones and semantic foreground/border roles, rather than hardcoded hex colors.
 
-Resolve **one color theme at a time**. A component with a `-light` suffix uses light roles; `-dark` uses dark roles. Secondary action default background is transparent with `color.border.interactive`; hover and pressed share the approved secondary-hover surface. Disabled controls use existing disabled roles; this is not a text-contrast promise for disabled content. Status backgrounds, text and outlines are separate semantic roles; error and destructive action use distinct roles even where palette values overlap.
+Resolve **one color theme at a time**. The `light-` and `dark-` prefixes identify theme-specific semantic colors. Secondary action default background is transparent with `color.border.interactive`; hover and pressed share the approved secondary-hover surface. Disabled controls use existing disabled roles; this is not a text-contrast promise for disabled content. Status backgrounds, text and outlines are separate semantic roles; error and destructive action use distinct roles even where palette values overlap.
 
 Aim for **WCAG 2.2 AA** on actual combinations, checking normal text ≥4.5:1 and non-text contrast ≥3:1 where applicable. The approved focus blue (`color.border.focus`, #558EDD) has insufficient standalone contrast against some light surfaces; add the specified **contextual neutral contrasting band**, not a new focus color. Never rely on background, color or shadow alone to communicate state. There is **no approved on-brand foreground color** for text over orange; validate any such use separately.
 
@@ -336,36 +183,23 @@ Long-form reading content uses **70ch maximum on web**, shrinking to available w
 
 ## Elevation & Depth
 
-Moshi is **flat by default**. Prefer existing semantic canvas, surface, elevated surface and border color roles for hierarchy. Normal cards have **no shadow**. There are exactly two optional, mutually exclusive shadow levels (see [SHAPE.md](SHAPE.md)): `elevation.level1` offset 0/4, blur 12, spread 0; `elevation.level2` offset 0/8, blur 24, spread 0, using approved light/dark alpha-black colors. The DESIGN.md alpha schema has no shadow group, so shadow geometry remains authoritative in [the elevation tokens](tokens/shape/).
+Moshi is **flat by default**. Prefer existing semantic canvas, surface, elevated surface and border color roles for hierarchy. Ordinary surfaces have no shadow by default. There are exactly two optional, mutually exclusive shadow levels (see [SHAPE.md](SHAPE.md)): `elevation.level1` offset 0/4, blur 12, spread 0; `elevation.level2` offset 0/8, blur 24, spread 0, using approved light/dark alpha-black colors. The DESIGN.md alpha schema has no shadow group, so shadow geometry remains authoritative in [the elevation tokens](tokens/shape/).
 
-Use level1 only for suitable small floating surfaces; level2 optionally for dialogs and prominent overlays if borders and tone are insufficient. Do not stack both shadows. A modal scrim uses `color.background.overlay`, **not** a drop shadow. Neither elevation nor borders alone establish accessible focus.
+Use level1 only for suitable small floating surfaces; level2 is an optional stronger layer if borders and tone are insufficient. Component-specific elevation use is not yet approved. Do not stack both shadows. A modal scrim uses `color.background.overlay`, **not** a drop shadow. Neither elevation nor borders alone establish accessible focus.
 
 ## Shapes
 
 The `rounded` map reproduces every approved `radius.*` primitive: none 0px, sm 4px, md 8px, lg 12px, xl 16px, full 9999px. `full` is a **fully rounded pill/circle sentinel**, not a requirement to measure 9999 physical pt/dp on native platforms.
 
-Standard separators and boundaries use `border.width.default` = **1 CSS px / 1 iOS pt / 1 Android dp**. Border colors come from the canonical semantic color family. Radius choices are component-owned: typically md for buttons and text fields, sm for checkbox, lg for cards and dialogs. Avoid pill styling everywhere or strong borders combined with strong shadows.
-
-## Components
-
-The `components` YAML map is an **alpha-schema style projection** of the six approved contracts, flattened into light/dark variants and significant visual states. It is **not** a runtime implementation or a substitute for the machine-readable [component contracts](components/) and [COMPONENTS.md](COMPONENTS.md).
-
-- **Button:** primary (blue fill, on-action text), secondary (transparent fill, interactive blue border and blue foreground), destructive (destructive fill/on-action). Hover/pressed reuse the existing hover fills. Compact/default/comfortable web minimum visual heights: 32/36/40px, with content growth and proper hit targets. Disabled and loading are programmatic behavior as well as visual states.
-- **Icon Button:** Button semantics and variants, but a nonempty **accessible name** is mandatory even when a tooltip is displayed. Visual glyph size is not hit-target size.
-- **Text Field:** persistent visible label; help and error text; use semantic field border and explicit invalid indication. Placeholders are not labels. Connect labels and error descriptions to the input.
-- **Checkbox:** support checked, unchecked, programmatic indeterminate and disabled. The 16px visual indicator is not the full target; selection needs a check or mixed mark, not only a fill color.
-- **Card:** quiet surface with optional border, radius lg, 16px default padding (24px comfortable), **no default shadow**. A card is not automatically an interactive wrapper.
-- **Dialog:** modal elevated surface and scrim, radius lg, internal padding 24px. Correct modal focus entry, containment and restoration, cancellation/back behavior, and titled semantics are required. Level2 shadow is optional.
-
-For interaction hit areas, follow the minimums documented in [COMPONENTS.md](COMPONENTS.md): **24 CSS px web** subject to WCAG exceptions (larger preferred), **44pt iOS**, **48dp Android**. This alpha YAML representation does not encode complete native interaction semantics. Do not invent unapproved variants or change component anatomy to fit YAML limitations.
+Standard separators and boundaries use `border.width.default` = **1 CSS px / 1 iOS pt / 1 Android dp**. Border colors come from the canonical semantic color family. Component-specific radius assignments are deferred until components are designed and approved. Avoid pill styling everywhere or strong borders combined with strong shadows.
 
 ## Do's and Don'ts
 
 - **Do** read this file plus the canonical source specifications before generating or reviewing UI. **Don't** treat this generated projection as a replacement source of truth.
-- **Do** reuse exactly the approved semantic color roles, typography roles, spacing primitives, radius values and component contracts. **Don't** invent new HEX colors, type styles, gap aliases or decorative elevation.
+- **Do** reuse exactly the approved semantic color roles, typography roles, spacing primitives and radius values. **Don't** invent new HEX colors, type styles, gap aliases or decorative elevation.
 - **Do** prefer functional layouts and accessible feedback. **Don't** copy another product's brand or protected assets.
 - **Do** test both themes, keyboard navigation, visible focus, screen reader labels, zoom, contrast and native Dynamic Type/Android scaling. **Don't** assume static validation proves rendering or accessibility compliance.
 - **Do** use content-driven widths, safe areas, touch targets and thoughtful state feedback. **Don't** use horizontal scrolling for routine forms, fixed card heights, placeholder-only labels or color-only error states.
-- **Do** propose documented extensions when a genuinely new design decision is necessary. **Don't** silently change the approved canonical files.
+- **Do** propose documented extensions when a genuinely new design decision is necessary. **Don't** silently change the approved canonical files or present hypothetical component designs as approved.
 
 **Validation:** `node scripts/build-design-md.mjs --check` verifies this file exactly matches approved source tokens and this approved guidance. The official alpha format can also be linted with `npx @google/design.md lint DESIGN.md`. GitHub Actions has previously failed before runner allocation; a workflow failure with zero executed steps is not a token validation result.

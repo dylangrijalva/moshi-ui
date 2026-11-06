@@ -10,7 +10,6 @@ on:
       - 'tokens/typography/**'
       - 'tokens/spacing/**'
       - 'tokens/shape/**'
-      - 'tokens/components/**'
       - '.github/workflows/validate-design-md.yml'
   pull_request:
     paths:
@@ -21,7 +20,6 @@ on:
       - 'tokens/typography/**'
       - 'tokens/spacing/**'
       - 'tokens/shape/**'
-      - 'tokens/components/**'
       - '.github/workflows/validate-design-md.yml'
   workflow_dispatch:
 
