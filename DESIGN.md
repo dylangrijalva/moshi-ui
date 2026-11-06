@@ -59,7 +59,7 @@ colors:
   dark-background-status-warning: "#302008"
   dark-background-status-error: "#3B121E"
   dark-background-status-info: "#0D2847"
-  dark-foreground-primary: "#FFFFFF"
+  dark-foreground-primary: "#E5E5E5"
   dark-foreground-secondary: "#FFFFFFCC"
   dark-foreground-tertiary: "#FFFFFF99"
   dark-foreground-disabled: "#FFFFFF80"

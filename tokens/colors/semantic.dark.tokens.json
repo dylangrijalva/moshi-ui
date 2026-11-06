@@ -67,7 +67,7 @@
     },
     "foreground": {
       "primary": {
-        "$value": "{color.neutral.0}"
+        "$value": "{color.neutral.200}"
       },
       "secondary": {
         "$value": "{color.moshi.alpha.white.80}"

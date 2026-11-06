@@ -66,7 +66,7 @@ Every table below lists the full `color.*` semantic path, resolved HEX for light
 
 | Semantic token | Light HEX | Dark HEX | Light primitive | Dark primitive |
 | --- | --- | --- | --- | --- |
-| `color.foreground.primary` | `#252525` | `#FFFFFF` | `neutral.900` | `neutral.0` |
+| `color.foreground.primary` | `#252525` | `#E5E5E5` | `neutral.900` | `neutral.200` |
 | `color.foreground.secondary` | `#666666` | `#FFFFFFCC` | `neutral.600` | `moshi.alpha.white.80` |
 | `color.foreground.tertiary` | `#6B6B6B` | `#FFFFFF99` | `moshi.neutral.light.2` | `moshi.alpha.white.60` |
 | `color.foreground.disabled` | `#7A7A7A` | `#FFFFFF80` | `neutral.500` | `moshi.alpha.white.50` |

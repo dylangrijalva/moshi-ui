@@ -78,7 +78,7 @@ const expected={
   ],
   "foreground.primary": [
     "#252525",
-    "#FFFFFF"
+    "#E5E5E5"
   ],
   "foreground.secondary": [
     "#666666",
